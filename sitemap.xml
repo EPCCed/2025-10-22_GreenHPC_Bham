@@ -1,153 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/06-containers-on-the-cloud.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/06-containers-on-the-cloud.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/08-orchestration.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/08-orchestration.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/404.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/404.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/CODE_OF_CONDUCT.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/LICENSE.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/about.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/about.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/advanced-containers.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/advanced-containers.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/aio.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/aio.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/creating-container-images.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/creating-container-images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/discuss.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/discuss.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/docker-hub.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/docker-hub.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/docker-image-examples.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/docker-image-examples.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/e01-github-actions.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/e01-github-actions.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/e02-jekyll-lesson-example.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/e02-jekyll-lesson-example.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/images.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/index.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/index.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/06-containers-on-the-cloud.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/06-containers-on-the-cloud.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/08-orchestration.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/08-orchestration.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/404.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/404.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/CODE_OF_CONDUCT.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/LICENSE.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/about.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/about.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/advanced-containers.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/advanced-containers.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/aio.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/aio.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/creating-container-images.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/creating-container-images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/discuss.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/discuss.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/docker-hub.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/docker-hub.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/docker-image-examples.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/docker-image-examples.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/e01-github-actions.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/e01-github-actions.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/e02-jekyll-lesson-example.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/e02-jekyll-lesson-example.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/images.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/images.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/index.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/index.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/instructor-notes.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/introduction.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/introduction.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/key-points.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/key-points.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/managing-containers.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/managing-containers.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/meet-docker.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/meet-docker.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/profiles.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/profiles.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/reference.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/reference.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/reproduciblity.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/reproduciblity.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor/running-containers.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor/running-containers.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/instructor-notes.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/instructor-notes.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/introduction.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/introduction.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/key-points.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/key-points.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/managing-containers.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/managing-containers.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/meet-docker.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/meet-docker.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/profiles.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/profiles.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/reference.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/reference.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/reproduciblity.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/reproduciblity.html</loc>
   </url>
   <url>
-    <loc>https://preview.carpentries.org/docker-introduction/running-containers.html</loc>
+    <loc>https://EPCCed.github.io/green-software-archer2/running-containers.html</loc>
   </url>
 </urlset>
