@@ -118,11 +118,11 @@
   Green software use on HPC
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 75%" class="percentage">
-    75%
+<aside class="col-md-12 lesson-progress"><div style="width: 60%" class="percentage">
+    60%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 75%" aria-valuenow="75" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 60%" aria-valuenow="60" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -252,6 +252,15 @@
   </div><!--/div.accordion-item-->
 </div><!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush6">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading6">
+        <a href="hardware-efficiency.html">5. Hardware Efficiency</a>
+    </div><!--/div.accordion-header-->
+
+  </div><!--/div.accordion-item-->
+</div><!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -295,7 +304,7 @@
   <div class="col-xl-8 col-lg-12 primary-content">
     <nav class="lesson-content mx-md-4" aria-label="Previous and Next Chapter"><!-- content for small screens --><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/energy-efficiency.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/hardware-efficiency.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -303,8 +312,8 @@
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Energy Efficiency
         </a>
-        <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
-          Home
+        <a class="chapter-link float-end" href="../instructor/hardware-efficiency.html" rel="next">
+          Next: Hardware Efficiency...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
@@ -377,13 +386,13 @@ grid, both the lower- and the higher-carbon sources.</p>
 <h3 id="variability-of-carbon-intensity">Variability of carbon intensity<a class="anchor" aria-label="anchor" href="#variability-of-carbon-intensity"></a></h3>
 <p>Carbon intensity varies by location since some regions have an energy
 mix containing more clean energy sources than others.</p>
-<figure><img src=".././images/07_variability_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/07_variability_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><p>Carbon intensity also changes over time due to the inherent
 variability of renewable energy caused by the unpredictability of
 weather conditions. For example, when it’s cloudy or the wind isn’t
 blowing, carbon intensity increases since more of the electricity in
 your mix comes from sources that emit carbon.</p>
-<figure><img src=".././images/08_variability_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/08_variability_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure></div>
 <div class="section level3">
 <h3 id="dispatchability-curtailment">Dispatchability &amp; curtailment<a class="anchor" aria-label="anchor" href="#dispatchability-curtailment"></a></h3>
@@ -417,7 +426,7 @@ minimum functioning threshold, and some don’t scale; they are considered
 a consistent, always-on baseload. Because of this, we sometimes have the
 scenario where we curtail (throw away) renewable energy while still
 consuming energy from fossil fuel power plants.</p>
-<figure><img src=".././images/09_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/09_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><p>In these situations, the marginal carbon intensity will be 0
 gCO2eq/kWh since we know that any new demand will match the renewable
 energy we are curtailing.</p>
@@ -430,7 +439,7 @@ the same model.</p>
 <strong>reduce</strong> the supply to balance supply and demand. They
 can do this in one of two ways:</p>
 <ol style="list-style-type: decimal"><li><strong>Buy less energy from fossil fuel plants.</strong></li>
-</ol><p><img src=".././images/10_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure"> Energy from fossil fuel plants is usually the most
+</ol><p><img src=".././fig/10_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure"> Energy from fossil fuel plants is usually the most
 expensive so this is the preferred method. This directly translates to
 burning fewer fossil fuels.</p>
 <ol start="2" style="list-style-type: decimal"><li>
@@ -446,7 +455,7 @@ the supply to balance supply and demand. They can do this in one of two
 ways:</p>
 <ol style="list-style-type: decimal"><li><strong>Buy more energy from renewable sources that are currently
 being curtailed</strong></li>
-</ol><figure><img src=".././images/11_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+</ol><figure><img src=".././fig/11_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><p>If you are curtailing, it means you have excess energy you could
 dispatch. Renewable energy is already the cheapest, so curtailed
 renewable energy will be the cheapest dispatchable energy source.
@@ -454,7 +463,7 @@ Renewable plants will then sell the energy they would have had to
 curtail.</p>
 <ol start="2" style="list-style-type: decimal"><li>
 <strong>Buy more energy from fossil fuel plants</strong>.</li>
-</ol><figure><img src=".././images/12_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+</ol><figure><img src=".././fig/12_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><p>Fossil fuels are inherently dispatchable; they can quickly increase
 energy production by burning more. However, coal costs money, so this is
 the least preferred solution.</p>
@@ -472,7 +481,7 @@ carbon intensity.</p>
 ensure investment flows towards low-carbon emitting plants and away from
 high-carbon emitting plants.</p>
 </div>
-<figure><img src=".././images/13_carbon_aware.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/13_carbon_aware.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><p>There is a global transformation happening right now. All around the
 world, electricity grids are changing from primarily burning fossil
 fuels to sourcing energy from lower carbon sources like wind and solar.
@@ -509,7 +518,7 @@ location where the current carbon intensity is lower. It might be a
 region that naturally has lower carbon sources of energy. For example,
 moving to different hemispheres depending on the season for more
 sunlight hours.</p>
-<figure><img src=".././images/14_spatial_shifting.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/14_spatial_shifting.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure></div>
 <div class="section level4">
 <h4 id="temporal-shifting">Temporal shifting<a class="anchor" aria-label="anchor" href="#temporal-shifting"></a></h4>
@@ -519,7 +528,7 @@ the day or night when it’s sunnier or windier and, therefore, the carbon
 intensity is lower. This is called temporal demand shifting. We can
 predict future carbon intensity reasonably well through advances in
 weather forecasting.</p>
-<figure><img src=".././images/15_temporal_shifting.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/15_temporal_shifting.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><p>Some of the biggest technology companies have recognised the
 importance of carbon awareness and are using advanced modeling
 techniques to implement demand shifting.</p>
@@ -544,7 +553,7 @@ lower.</li>
 times when the carbon intensity is lowest. Demand shaping is a similar
 strategy. However, instead of moving demand to a different region or
 time, we shape our computation to match the existing supply.</p>
-<figure><img src=".././images/16_demand_shaping.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/16_demand_shaping.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
 </figure><ul><li>If carbon intensity is low, increase the demand; do more in your
 applications.</li>
 <li>If carbon intensity is high, decrease demand; do less in your
@@ -605,7 +614,7 @@ intensity and less in periods of high intensity.</li>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/energy-efficiency.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
-        <a class="chapter-link float-end" href="../instructor/index.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
+        <a class="chapter-link float-end" href="../instructor/hardware-efficiency.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
       </div>
       <!-- content for large screens -->
       <div class="d-none d-sm-none d-md-block">
@@ -613,8 +622,8 @@ intensity and less in periods of high intensity.</li>
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>
           Previous: Energy Efficiency
         </a>
-        <a class="chapter-link float-end" href="../instructor/index.html" rel="next">
-          Home
+        <a class="chapter-link float-end" href="../instructor/hardware-efficiency.html" rel="next">
+          Next: Hardware Efficiency...
           <i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i>
         </a>
       </div>
