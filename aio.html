@@ -532,7 +532,7 @@ of carbon reduction.</li>
 </div>
 </section></section><section id="aio-carbon-efficiency"><p>Content from <a href="carbon-efficiency.html">Carbon Efficiency</a></p>
 <hr>
-<p>Last updated on 2024-12-23 |
+<p>Last updated on 2025-01-10 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/carbon-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -550,7 +550,7 @@ of carbon reduction.</li>
 change?</li>
 <li>What is the difference between climate and weather?</li>
 <li>What are greenhouse gases (GHGs)?</li>
-<li>What does the term carbon equivalence (CO2e) mean?</li>
+<li>What does the term carbon equivalence (CO<sub>2</sub>e) mean?</li>
 <li>How is climate change monitored and reported?</li>
 </ul>
 </div>
@@ -562,7 +562,7 @@ change?</li>
 <h3 class="card-title">Objectives</h3>
 <ul>
 <li>Understand key terms in environmental sustainability.</li>
-<li>Understand what CO2e means.</li>
+<li>Understand what CO<sub>2</sub>e means.</li>
 <li>Understand how changes in the climate are monitored.</li>
 </ul>
 </div>
@@ -574,13 +574,13 @@ change?</li>
 </h2>
 <hr class="half-width">
 <p>Understanding the impact of greenhouse gases on our environment is
-key to understanding software’s own carbon footprint. You will learn
-about the different kinds of greenhouse gases present in the
-environment, how they are emitted and measured, and what is being done
-by different organizations around the world to control and reduce these
+key to understanding HPC’s own carbon footprint. You will learn about
+the different kinds of greenhouse gases present in the environment, how
+they are emitted and measured, and what is being done by different
+organisations around the world to control and reduce these
 emissions.</p>
 <p>You will find out about the GHG protocol and what it means for green
-software practitioners.</p>
+use of HPC.</p>
 </section><section><h2 class="section-heading" id="key-concepts">Key concepts<a class="anchor" aria-label="anchor" href="#key-concepts"></a>
 </h2>
 <hr class="half-width">
@@ -601,11 +601,9 @@ been the main driver of climate change.</p>
 <p>Weather refers to the conditions of the atmosphere in a short period
 of time. Climate refers to the conditions of the atmosphere over long
 periods of time. Any changes to the long-term condition of the
-atmosphere will also cause changes to the short-term conditions. An
-obvious comparison is that if the average temperature of the atmosphere
-increases, the average temperature of the weather in any given season
-will also increase. Some examples of measurable changes to weather
-conditions due to climate change are:</p>
+atmosphere will also cause changes to the short-term conditions. Some
+examples of measurable changes to weather conditions due to climate
+change are:</p>
 <ul>
 <li>Changes to the water cycle, including rainfall</li>
 <li>Melting of ice</li>
@@ -630,20 +628,21 @@ Earth and often come from natural sources like animals, volcanoes, and
 other geological activity. The greenhouse effect allows the Earth to
 maintain a higher temperature than it would without them by capturing
 more heat from solar radiation. Like many other natural processes of the
-Earth, the greenhouse effect is a finely tuned balance that can be upset
-by multiple factors.</p>
+Earth, the greenhouse effect is a balance that can be upset by multiple
+factors.</p>
 </div>
 <div class="section level3">
-<h3 id="carbon-and-co2eq">Carbon and CO2eq<a class="anchor" aria-label="anchor" href="#carbon-and-co2eq"></a>
+<h3 id="carbon-and-co2e">Carbon and CO<sub>2</sub>e<a class="anchor" aria-label="anchor" href="#carbon-and-co2e"></a>
 </h3>
 <p>Carbon is often used as a broad term to refer to the impact of all
-types of emissions and activities on global warming. CO2eq/CO2-eq/ CO2e,
-which stands for carbon equivalence, is a measurement term used to
-measure this impact. For example, 1 ton of methane has the same warming
-effect as about <a href="https://energy.ec.europa.eu/topics/oil-gas-and-coal/methane-emissions_en" class="external-link">84
-tons of CO2 over 20 years</a>, so we normalize it to 84 tons CO2eq. We
-may shorten even further to just carbon, which is a term often used to
-refer to all GHGs.</p>
+types of emissions and activities on global warming. CO<sub>2</sub>e
+(sometimes: CO<sub>2</sub>eq/CO<sub>2</sub>-eq), which stands for
+<em>carbon equivalence</em>, is a measurement term used to measure this
+impact. For example, 1 ton of methane has the same warming effect as
+about <a href="https://energy.ec.europa.eu/topics/oil-gas-and-coal/methane-emissions_en" class="external-link">84
+tons of CO<sub>2</sub> over 20 years</a>, so we normalize it to 84 tons
+CO<sub>2</sub>e. We may shorten even further to just carbon, which is a
+term often used to refer to all GHGs.</p>
 </div>
 </section><section><h2 class="section-heading" id="monitoring-climate-change">Monitoring climate change<a class="anchor" aria-label="anchor" href="#monitoring-climate-change"></a>
 </h2>
@@ -664,8 +663,7 @@ prepare for and adapt to the environmental effects caused by climate
 change. In addition, each party is expected to update its progress
 through a Nationally Determined Contribution (NDC). As of October 2024,
 <a href="https://www.un.org/en/climatechange/paris-agreement" class="external-link">195
-parties</a>, including the European Union, have joined the
-agreement.</p>
+parties</a>, including the UK, have joined the agreement.</p>
 <p>The <a href="https://unfccc.int/process-and-meetings/the-convention/what-is-the-united-nations-framework-convention-on-climate-change" class="external-link"><strong>United
 Nations Framework Convention on Climate Change (UNFCCC)</strong></a> is
 a group created to achieve the stabilization of greenhouse gas
@@ -689,34 +687,16 @@ IPCC is an organization of governments that are members of the United
 Nations or the World Meteorological Organization (WMO). The IPCC
 currently has 195 members.</p>
 <p>We will always emit carbon through our activities but being carbon
-efficient means minimizing the amount of carbon emitted per unit of
+efficient means minimising the amount of carbon emitted per unit of
 work. We aim to ensure that for each gram of carbon we emit into the
 atmosphere, we extract the most value possible.</p>
-<figure><img src="./fig/02_monitoring_climate_change.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src="./fig/02_monitoring_climate_change.png" title="image_tooltip" alt="Picture of user minimising carbon emissions" class="figure mx-auto d-block"><div class="figcaption">Picture of user minimising carbon
+emissions</div>
 </figure><p>In the software space, the part we play in the climate solution is
 <strong>building carbon-efficient applications</strong>. Being carbon
 efficient is about building applications that add the same value for you
 or your users but which emit less carbon.</p>
-</section><section><h2 class="section-heading" id="summary">Summary<a class="anchor" aria-label="anchor" href="#summary"></a>
-</h2>
-<hr class="half-width">
-<ul>
-<li>Greenhouse gases are a group of gases contributing to global
-warming. Carbon is often used as a broad term to refer to the impact of
-all types of emissions and activities on global warming. CO2eq is a
-measurement term used to measure this impact.</li>
-<li>The international community, in groups such as the UNFCCC, has come
-together to limit the impact of global warming by reducing emissions,
-aiming for a ‘preferable’ lower limit of 1.5°C. This was agreed through
-the UN IPCC in 2015 in the <a href="https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement" class="external-link">Paris
-Climate Agreement</a> and is monitored at the regular COP event.</li>
-<li>Everything we do emits carbon into the atmosphere, and our goal is
-to emit the least amount of carbon possible. This constitutes the first
-principle of green software: carbon efficiency, emitting the least
-amount of carbon possible per unit of work.</li>
-</ul>
-<!--  LocalWords:  keypoints links.md endcomment
- --><div id="keypoints1" class="callout keypoints">
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -724,11 +704,25 @@ amount of carbon possible per unit of work.</li>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>Emit the least amount of carbon possible.</li>
+<li>Greenhouse gases are a group of gases contributing to global
+warming. Carbon is often used as a broad term to refer to the impact of
+all types of emissions and activities on global warming. CO<sub>2</sub>e
+is a measurement term used to measure this impact.</li>
+<li>The international community, in groups such as the UNFCCC, has come
+together to limit the impact of global warming by reducing emissions,
+aiming for a ‘preferable’ lower limit of 1.5°C. This was agreed through
+the UN IPCC in 2015 in the <a href="https://unfccc.int/process-and-meetings/the-paris-agreement/the-paris-agreement" class="external-link">Paris
+Climate Agreement</a> and is monitored at the regular COP event.</li>
+<li>Everything we do emits carbon into the atmosphere, and our goal is
+to emit the least amount of carbon possible. This constitutes the first
+principle of green software use: <strong>carbon efficiency, emitting the
+least amount of carbon possible per unit of work</strong>.</li>
 </ul>
 </div>
 </div>
 </div>
+<!--  LocalWords:  keypoints links.md endcomment
+ -->
 </section></section><section id="aio-energy-efficiency"><p>Content from <a href="energy-efficiency.html">Energy Efficiency</a></p>
 <hr>
 <p>Last updated on 2024-12-23 |
