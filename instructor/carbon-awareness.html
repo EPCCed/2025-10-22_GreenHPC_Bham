@@ -337,7 +337,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Carbon Awareness</h1>
-        <p>Last updated on 2025-01-07 |
+        <p>Last updated on 2025-01-13 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/carbon-awareness.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -358,7 +358,11 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TBC</li>
+<ul><li>How does electricity generation affect GHG emissions?</li>
+<li>What is <em>carbon instensity</em> of electricity generation and how
+does it vary geographically and temporally?</li>
+<li>What techniques can I use to make my use of HPC greener and
+influence transition to low-carbon electricity generation?</li>
 </ul></div>
 </div>
 </div>
@@ -366,7 +370,12 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TBC</li>
+<ul><li>Understand the concept of <em>carbon intensity</em> in electricity
+generation</li>
+<li>Appreciate the level of variation in carbon intensity across the UK
+and the world</li>
+<li>Understand techniques for greener use of HPC: demand shifting and
+demand shaping</li>
 </ul></div>
 </div>
 </div>
@@ -387,14 +396,36 @@ carbon sources.</p>
 </section><section><h2 class="section-heading" id="key-concepts">Key concepts<a class="anchor" aria-label="anchor" href="#key-concepts"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="carbon-intensity">Carbon intensity<a class="anchor" aria-label="anchor" href="#carbon-intensity"></a></h3>
-<p>Carbon intensity measures how much carbon (CO2e) is emitted per
-kilowatt-hour (KWh) of electricity consumed. The standard unit of carbon
-intensity is gCO2eq/kWh, or grams of carbon per kilowatt hour.</p>
+<p>Carbon intensity measures how much carbon (CO<sub>2</sub>e) is
+emitted per kilowatt-hour (kWh) of electricity consumed. The standard
+unit of carbon intensity is gCO<sub>2</sub>e/kWh, or grams of carbon per
+kilowatt hour.</p>
 <p>If your computer is plugged directly into a wind farm, its
-electricity would have a carbon intensity of 0 gCO2eq/kWh since a wind
-farm emits no carbon to produce that electricity. However, most people
-can’t plug directly into wind farms; instead, they plug into power grids
-supplied with electricity from various sources.</p>
+electricity would have a carbon intensity of 0 gCO<sub>2</sub>e/kWh
+since a wind farm emits no carbon to produce that electricity. However,
+most people can’t plug directly into wind farms; instead, they plug into
+power grids supplied with electricity from various sources.</p>
+<div id="embodied-carbon-of-renewable-sources" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="embodied-carbon-of-renewable-sources" class="callout-inner">
+<h3 class="callout-title">Embodied carbon of renewable sources</h3>
+<div class="callout-content">
+<p>In reality, the carbon intensity of renewable sources still have some
+GHG emissions associated with them from the emissions used to build,
+operate and decommission them. As we will se in a later episode, these
+emissions are usually amortised across the lifetime of the facility (in
+this case, the lifetime of the generation facility). By convention,
+these embodied emissions are not usually included in carbon intensity
+values for generated energy as they are complex to calculate and the
+emissions saved by replacing non-renewable sources with renewable
+sources have vastly outweighed the embodied emissions of renewable
+sources. These emissions sources will become a more important component
+of energy generation as electricity grids continue to decarbonise.</p>
+</div>
+</div>
+</div>
 <p>Once on a grid, you can’t control which sources supply the
 electricity you are using; you simply get a mix of everything. So, your
 carbon intensity will be a mix of all the current power sources in a
@@ -403,18 +434,29 @@ grid, both the lower- and the higher-carbon sources.</p>
 <div class="section level3">
 <h3 id="variability-of-carbon-intensity">Variability of carbon intensity<a class="anchor" aria-label="anchor" href="#variability-of-carbon-intensity"></a></h3>
 <p>Carbon intensity varies by location since some regions have an energy
-mix containing more clean energy sources than others.</p>
-<figure><img src=".././fig/07_variability_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
-</figure><p>Carbon intensity also changes over time due to the inherent
+mix containing more clean energy sources than others. This table shows
+the median carbon intensity for UK regions over 2024 (ref.):</p>
+<table class="table"><thead><tr class="header"><th>Region</th>
+<th align="right">Median Carbon Intensity (gCO<sub>2</sub>e/kWh)</th>
+</tr></thead><tbody><tr class="odd"><td>S. Scotland</td>
+<td align="right">???</td>
+</tr></tbody></table><p>Similarly, this table compares values across the world in 2023
+(ref.):</p>
+<table class="table"><thead><tr class="header"><th>Country</th>
+<th align="right">Median Carbon Intensity (gCO<sub>2</sub>e/kWh)</th>
+</tr></thead><tbody><tr class="odd"><td>UK</td>
+<td align="right">???</td>
+</tr></tbody></table><p>Carbon intensity also changes over time due to the inherent
 variability of renewable energy caused by the unpredictability of
 weather conditions. For example, when it’s cloudy or the wind isn’t
 blowing, carbon intensity increases since more of the electricity in
 your mix comes from sources that emit carbon.</p>
-<figure><img src=".././fig/08_variability_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/08_variability_CI.png" title="Diagram illustrating change in carbon intensity over time due to changes in atmospheric conditions" alt="Diagram illustrating change in carbon intensity over time due to changes in atmospheric conditions" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating change in carbon intensity
+over time due to changes in atmospheric conditions</div>
 </figure></div>
 <div class="section level3">
 <h3 id="dispatchability-curtailment">Dispatchability &amp; curtailment<a class="anchor" aria-label="anchor" href="#dispatchability-curtailment"></a></h3>
-<p>Electricity demand varies during the day, and supply always needs to
+<p>Electricity demand varies during the day and supply always needs to
 be able to meet that demand. A brownout (a dip in the voltage level of
 the power line) occurs if a utility doesn’t produce enough electricity
 to meet demand. Conversely, if a utility produces more electricity than
@@ -444,10 +486,11 @@ minimum functioning threshold, and some don’t scale; they are considered
 a consistent, always-on baseload. Because of this, we sometimes have the
 scenario where we curtail (throw away) renewable energy while still
 consuming energy from fossil fuel power plants.</p>
-<figure><img src=".././fig/09_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/09_marginal_CI.png" title="Diagram illustrating marginal carbon intensity and curtailment" alt="Diagram illustrating marginal carbon intensity and curtailment" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating marginal carbon intensity
+and curtailment</div>
 </figure><p>In these situations, the marginal carbon intensity will be 0
-gCO2eq/kWh since we know that any new demand will match the renewable
-energy we are curtailing.</p>
+gCO<sub>2</sub>e/kWh since we know that any new demand will match the
+renewable energy we are curtailing.</p>
 </div>
 <div class="section level3">
 <h3 id="energy-markets">Energy markets<a class="anchor" aria-label="anchor" href="#energy-markets"></a></h3>
@@ -457,23 +500,25 @@ the same model.</p>
 <strong>reduce</strong> the supply to balance supply and demand. They
 can do this in one of two ways:</p>
 <ol style="list-style-type: decimal"><li><strong>Buy less energy from fossil fuel plants.</strong></li>
-</ol><p><img src=".././fig/10_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure"> Energy from fossil fuel plants is usually the most
-expensive so this is the preferred method. This directly translates to
-burning fewer fossil fuels.</p>
+</ol><p><img src=".././fig/10_marginal_CI.png" title="Diagram illustrating reduction in demand from fossil fuel plants" alt="Diagram illustrating reduction in demand from fossil fuel plants" class="figure">
+Energy from fossil fuel plants is usually the most expensive so this is
+the preferred method. This directly translates to burning fewer fossil
+fuels.</p>
 <ol start="2" style="list-style-type: decimal"><li>
-<strong>Buy less energy from renewable sources</strong>. Renewable
-sources are the cheapest, so they prefer not to do this. If a renewable
-source doesn’t manage to sell all of its electricity, it has to throw
-the rest away.</li>
-</ol><p>Reducing the amount of electricity consumed in your applications can
-help decrease the energy’s carbon intensity seeing as the first thing to
-be scaled back are fossil fuels.</p>
+<strong>Buy less energy from renewable sources</strong>.</li>
+</ol><p>Renewable sources are the cheapest, so they prefer not to do this. If
+a renewable source doesn’t manage to sell all of its electricity, it has
+to throw the rest away.</p>
+<p>Reducing the amount of electricity consumed by your use of HPC can
+help decrease the energy’s carbon intensity as the first thing to be
+scaled back are fossil fuels.</p>
 <p>When the demand for electricity goes up, utilities need to increase
 the supply to balance supply and demand. They can do this in one of two
 ways:</p>
 <ol style="list-style-type: decimal"><li><strong>Buy more energy from renewable sources that are currently
 being curtailed</strong></li>
-</ol><figure><img src=".././fig/11_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+</ol><figure><img src=".././fig/10_marginal_CI.png" title="Diagram illustrating increase in demand from renewable sources" alt="Diagram illustrating increase in demand from renewable sources" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating increase in demand from
+renewable sources</div>
 </figure><p>If you are curtailing, it means you have excess energy you could
 dispatch. Renewable energy is already the cheapest, so curtailed
 renewable energy will be the cheapest dispatchable energy source.
@@ -481,7 +526,8 @@ Renewable plants will then sell the energy they would have had to
 curtail.</p>
 <ol start="2" style="list-style-type: decimal"><li>
 <strong>Buy more energy from fossil fuel plants</strong>.</li>
-</ol><figure><img src=".././fig/12_marginal_CI.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+</ol><figure><img src=".././fig/12_marginal_CI.png" title="Diagram illustrating increase in demand from non-renewable sources" alt="Diagram illustrating increase in demand from non-renewable sources" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating increase in demand from
+non-renewable sources</div>
 </figure><p>Fossil fuels are inherently dispatchable; they can quickly increase
 energy production by burning more. However, coal costs money, so this is
 the least preferred solution.</p>
@@ -499,13 +545,14 @@ carbon intensity.</p>
 ensure investment flows towards low-carbon emitting plants and away from
 high-carbon emitting plants.</p>
 </div>
-<figure><img src=".././fig/13_carbon_aware.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
+<figure><img src=".././fig/13_carbon_aware.png" title="Image of transition from high-carbon to low-carbon energy sources" alt="Image of transition from high-carbon to low-carbon energy sources" class="figure mx-auto d-block"><div class="figcaption">Image of transition from high-carbon to
+low-carbon energy sources</div>
 </figure><p>There is a global transformation happening right now. All around the
 world, electricity grids are changing from primarily burning fossil
 fuels to sourcing energy from lower carbon sources like wind and solar.
 This is one of our best hopes for meeting our global reduction targets.
-As green software practitioners, let’s see some of the ways we can help
-accelerate that transition.</p>
+As green users of HPC, let’s see some of the ways we can help accelerate
+that transition.</p>
 <p>The primary driver for the transition is economic rather than any
 sustainability target. Renewables are winning because they are cheaper
 and getting even more affordable over time. So, to help accelerate the
@@ -521,9 +568,9 @@ sources and higher when it comes from higher-carbon sources.</p>
 increasing or decreasing your demand. If your work allows you to be
 flexible with when and where you run workloads, you can shift
 accordingly - consuming electricity when the carbon intensity is lower
-and pausing production when it is higher. For example, training a
-Machine Learning model at a different time or region with much lower
-carbon intensity.</p>
+and pausing production when it is higher. For example, running a
+simulation or model at a different time or region with much lower carbon
+intensity.</p>
 <p><a href="https://ieeexplore.ieee.org/document/6128960" class="external-link">Studies</a>
 show these actions can result in 45% to 99% carbon reductions depending
 on the number of renewables powering the grid.</p>
@@ -534,10 +581,17 @@ shifting.</p>
 <p>Spatial shifting means moving your computation to another physical
 location where the current carbon intensity is lower. It might be a
 region that naturally has lower carbon sources of energy. For example,
-moving to different hemispheres depending on the season for more
-sunlight hours.</p>
-<figure><img src=".././fig/14_spatial_shifting.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
-</figure></div>
+using an HPC facility sited in a location that is currently windy and so
+has a high proportion of wind power.</p>
+<figure><img src=".././fig/14_spatial_shifting.png" title="Diagram illustrating spatial demand shifting" alt="Diagram illustrating spatial demand shifting" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating spatial demand
+shifting</div>
+</figure><p>This requires you to have the ability to run on different HPC
+resources in different locations - for example, you could chose between
+running on a local HPC resource or a national HPC resource located
+elsewhere.</p>
+<!-- TODO: Maybe add advantages and disadvantages -->
+<!-- TODO: Also mention impact of cooling overheads, different seasons in different hemispheres, cooler locations -->
+</div>
 <div class="section level4">
 <h4 id="temporal-shifting">Temporal shifting<a class="anchor" aria-label="anchor" href="#temporal-shifting"></a></h4>
 <p>If you can’t shift your computation spatially to another region,
@@ -546,10 +600,14 @@ the day or night when it’s sunnier or windier and, therefore, the carbon
 intensity is lower. This is called temporal demand shifting. We can
 predict future carbon intensity reasonably well through advances in
 weather forecasting.</p>
-<figure><img src=".././fig/15_temporal_shifting.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
-</figure><p>Some of the biggest technology companies have recognised the
-importance of carbon awareness and are using advanced modeling
-techniques to implement demand shifting.</p>
+<figure><img src=".././fig/15_temporal_shifting.png" title="Diagram illustrating spatial demand shifting" alt="Diagram illustrating spatial demand shifting" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating spatial demand
+shifting</div>
+</figure><p>An example of a service that can predict carbon intensity to enable
+temporal demand shifting is the <a href="https://carbonintensity.org.uk" class="external-link">carbonintensity.org.uk website and
+API</a>.</p>
+<p>Some of the large technology companies have recognised the importance
+of carbon awareness and are using advanced modeling techniques to
+implement demand shifting.</p>
 <ul><li>
 <strong>Google Carbon Aware Data Centers</strong> - Google launched
 a project to <a href="https://blog.google/outreach-initiatives/sustainability/carbon-aware-computing-location/" class="external-link">make
@@ -571,13 +629,13 @@ lower.</li>
 times when the carbon intensity is lowest. Demand shaping is a similar
 strategy. However, instead of moving demand to a different region or
 time, we shape our computation to match the existing supply.</p>
-<figure><img src=".././fig/16_demand_shaping.png" title="image_tooltip" alt="alt_text" class="figure mx-auto d-block"><div class="figcaption">alt_text</div>
-</figure><ul><li>If carbon intensity is low, increase the demand; do more in your
-applications.</li>
-<li>If carbon intensity is high, decrease demand; do less in your
-applications.</li>
-</ul><p>Demand shaping for carbon-aware applications is all about the supply
-of carbon. When the carbon cost of running your application becomes
+<figure><img src=".././fig/16_demand_shaping.png" title="Diagram illustrating demand shaping" alt="Diagram illustrating demand shaping" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating demand shaping</div>
+</figure><ul><li>If carbon intensity is low, increase the demand; do more (or faster)
+calculations.</li>
+<li>If carbon intensity is high, decrease demand; do less (or slower)
+calculations.</li>
+</ul><p>Demand shaping for carbon-aware HPC use is all about the supply of
+carbon. When the carbon cost of running your simulation or model becomes
 high, shape the demand to match the supply of carbon. This can happen
 automatically, or the user can make a choice.</p>
 <p>Eco mode is an example of demand shaping. Eco modes are found in
@@ -585,7 +643,7 @@ everyday appliances like cars or washing machines. When activated, some
 amount of performance is sacrificed in order to consume fewer resources
 (gas or electricity). Because there is this trade-off with performance,
 eco modes are always presented to a user as a choice.</p>
-<p>Software applications can also have eco modes that can - either
+<p>Software or HPC services can also have eco modes that can - either
 automatically or with user consent - make decisions to reduce carbon
 emissions.</p>
 <p>One example of this is video conferencing software that adjusts
@@ -601,10 +659,10 @@ on the end user’s device.</p>
 which is to reduce consumption. We can achieve a lot by becoming more
 efficient with resources, but we also need to consume less at some
 point.</p>
-<p>As Green Software practitioners, we would consider canceling a
-process when the carbon intensity is high instead of demand shifting -
-reducing the demands of our application and the expectations of our end
-users.</p>
+<p>As green users of HPC, we would consider cancelling or reducing the
+power intensity of our workflow when the carbon intensity is high
+instead of demand shifting - reducing the energy demands of our
+work.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -687,7 +745,7 @@ intensity and less in periods of high intensity.</li>
   "url": "https://EPCCed.github.io/green-software-archer2/instructor/carbon-awareness.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/instructor/carbon-awareness.html",
   "dateCreated": "2025-01-13",
-  "dateModified": "2025-01-07",
+  "dateModified": "2025-01-13",
   "datePublished": "2025-01-13"
 }
 
