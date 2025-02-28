@@ -1,18 +1,22 @@
 ---
 title: Climate Commitments
 teaching: 20
-exercises: 5
+exercises: 0
 ---
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- TBC
+- Understand different carbon reduction methodologies and their role in meeting climate commitments.
+- Appreciate the difference between "net zero" and "carbon neutral" climate commitments.
+- Understand matching strategies for energy from renewable sources.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
-- TBC
+- What methodologies are available to reduce carbon emissions and how do they differ?
+- What is the difference between "net zero" and "carbon neutral" climate commitments?
+- How can organisations match renewable energy availability to demand?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -89,35 +93,37 @@ There are many different emissions reduction strategies that an organisation can
 
 ### Carbon Neutral
 
-To achieve carbon neutrality, an organization must measure its emissions, then match the total to its emissions offsets through carbon reduction projects. This can include carbon removal projects (neutralizations) and carbon avoidance projects (compensations).
+To achieve carbon neutrality, an organisation must measure its emissions, then match the total to its emissions offsets through carbon reduction projects. This can include carbon removal projects (neutralisations) and carbon avoidance projects (compensations).
 
-Carbon neutrality is defined by an internationally recognized standard: [PAS 2060](https://info.eco-act.com/hubfs/0%20-%20Downloads/PAS%202060/PAS%202060%20factsheet%20EN.pdf). Although this does recommend an organization sets abatement targets, it doesn't demand they reduce their emissions. So to be considered carbon neutral, an organization can just measure and offset without investing resources in eliminating their carbon emissions.
+Carbon neutrality is defined by an internationally recognized standard: [PAS 2060](https://info.eco-act.com/hubfs/0%20-%20Downloads/PAS%202060/PAS%202060%20factsheet%20EN.pdf). Although this does recommend an organisation sets abatement targets, it doesn't demand they reduce their emissions. So to be considered carbon neutral, an organization can just measure and offset without investing resources in eliminating their carbon emissions.
 
 To be carbon neutral, you must cover direct emissions (scope 1 and 2). The general expectation is that organizations measure and offset their scopes 1 and 2, and business travel from scope 3. However, there is no specific requirement to include that.
 
-Carbon neutral is a significant first step for any organization since it encourages measurement. However, there are not enough carbon offsets in the world to offset the emissions of all the organizations. Therefore, any strategy that doesn't include abatement will not scale or help the world achieve the 1.5 degree target set by the Paris Climate Agreement. This is where net zero comes into play.
+Carbon neutral is a significant first step for any organisation since it encourages measurement. However, there are not enough carbon offsets in the world to offset the emissions of all the organisations. Therefore, any strategy that doesn't include abatement will not scale or help the world achieve the 1.5&deg;C target set by the Paris Climate Agreement. This is where net zero comes into play.
 
 ### Net Zero
 
-Net zero means reducing emissions according to the latest climate science and balancing remaining residual emissions through carbon removals (neutralizations). Net zero, by definition, requires emissions reductions in line with a 1.5°C pathway. All businesses must do this to achieve net-zero global emissions by 2050.
+Net zero means reducing emissions according to the latest climate science and balancing remaining residual emissions through carbon removals (neutralisations). Net zero, by definition, requires emissions reductions in line with a 1.5&deg;C pathway. All organisations must do this to achieve net-zero global emissions by 2050.
 
-The critical differentiator between net zero and carbon neutral is net zero's focus on abatement rather than neutralizations and compensations. A net-zero target aims to eliminate emissions and only to use offsetting for the residual emissions that you cannot eliminate
+The critical differentiator between net zero and carbon neutral is net zero's focus on abatement rather than neutralisations and compensations. A net-zero target aims to eliminate emissions and only to use offsetting for the residual emissions that you cannot eliminate
 
-The [standard for net zero](https://sciencebasedtargets.org/resources/files/foundations-for-net-zero-full-paper.pdf) is being developed by the [Science Based Targets initiative](https://sciencebasedtargets.org/) (SBTi). They calculate that there is a 66% probability of limiting global warming to 1.5°C if we reach a level of abatement of about 90% of all GHG emissions by mid-century. So, to meet a net-zero target, an organization needs to eliminate 90% of its emissions by 2050. The remaining emissions can only be offset using neutralizations and permanent carbon removals.
+The [standard for net zero](https://sciencebasedtargets.org/resources/files/foundations-for-net-zero-full-paper.pdf) is being developed by the [Science Based Targets initiative](https://sciencebasedtargets.org/) (SBTi). They calculate that there is a 66% probability of limiting global warming to 1.5&deg;C if we reach a level of abatement of about 90% of all GHG emissions by mid-century. So, to meet a net-zero target, an organisation needs to eliminate 90% of its emissions by 2050. The remaining emissions can only be offset using neutralisations and permanent carbon removals.
 
 A net-zero strategy would mean that the actual amount of carbon in the atmosphere remains constant.
 
-Also, to be a net-zero target, you must cover direct and indirect, i.e. supply chain emissions (scopes 1,2 and 3). Therefore, your entire value chain needs to be included in the scope of your net-zero target. This is significant since scope 3 often represents the majority of emissions.
+Also, to be a net-zero target, you must cover direct and indirect, i.e. supply chain emissions (scopes 1,2 and 3). This is significant since scope 3 often represents the majority of emissions.
+
+Fo HPC facilities, part of these strategies include educating and putting policies and approaches in place to support users to understand and take action to reduce their emissions and maximise the carbon efficiency of their HPC use.
 
 #### SCI as part of a Net-Zero strategy
 
-The SCI is a metric specifically designed to drive the elimination of emissions. The only way to reduce your score is to invest time and resources into actions that eliminate emissions. The only activities the SCI recognizes as elimination actions are making your application more energy-efficient, more hardware efficient, or consuming lower-carbon energy sources. Offsets are an essential component of any climate strategy; however, offsets are not eliminations and therefore are not included in the SCI metric.
+The SCI is a metric specifically designed to drive the elimination of emissions. The only way to reduce your score is to invest time and resources into actions that eliminate emissions. The only activities the SCI recognises as elimination actions are making your application (use of HPC, in the specific case of HPC systems) more energy-efficient, more hardware efficient, or consuming lower-carbon energy sources. Offsets are an essential component of any climate strategy; however, offsets are not eliminations and therefore are not included in the SCI metric.
 
-Any net-zero strategy needs to have plans for how to both eliminate as well as neutralize emissions. The SCI helps organizations drive the elimination of emissions due to software. This makes the SCI an essential component of any net-zero strategy.
+Any net-zero strategy needs to have plans for how to both eliminate as well as neutralise emissions. The SCI helps organisations and users drive the elimination of emissions due to software. This makes the SCI an useful component of any net-zero strategy for operation and use of HPC systems.
 
 ### 100% Renewable
 
-When organizations set a target of 100% renewable power, they might distinguish between being **matched by** vs. **powered by** renewables.
+When organisations set a target of 100% renewable power, they might distinguish between being **matched by** vs. **powered by** renewable energy sources.
 
 **Powered by** means you are directly powered by a renewable power source, say a hydro dam. In that scenario, the energy the device receives only originates from that source, so you can confidently say that you are 100% powered by renewables.
 
@@ -127,7 +133,7 @@ You can't track individual electrons. Once the electrons from a wind farm are on
 
 #### Renewable Energy Certificates (REC)
 
-To solve this problem, a renewable plant sells two things. The first is its electricity, which it sells into a grid. The second is a REC, a [Renewable Energy Certificates](https://www.epa.gov/green-power-markets/renewable-energy-certificates-recs). 1 REC equals 1kWh of energy.
+To solve this problem, a renewable plant sells two things. The first is its electricity, which it sells into a grid. The second is a REC, a [Renewable Energy Certificates](https://www.epa.gov/green-power-markets/renewable-energy-certificates-recs). 1 REC equals 1 kWh of energy.
 
 If you want to be 100% matched by renewable energy and are on the grid, the solution is to buy enough RECs to cover the amount of electricity you consume. For instance, if you consume 100 kWh of electricity every day, then to be 100% matched by renewables, you buy 100 RECs.
 
@@ -135,7 +141,7 @@ When organizations set 100% renewable targets purchasing RECs on the market is t
 
 #### PPAs
 
-You might also hear the term PPA used alongside RECs. A PPA is a [Power Purchase Agreement](https://ppp.worldbank.org/public-private-partnership/sector/energy/energy-power-agreements/power-purchase-agreements), which is another way to purchase RECs. If you estimate you need 500MWh of electricity per year for a particular data center, you might sign a PPA to purchase 500MWh per year from a renewable plant. You would then get all the RECs associated with this power plant.
+You might also hear the term PPA used alongside RECs. A PPA is a [Power Purchase Agreement](https://ppp.worldbank.org/public-private-partnership/sector/energy/energy-power-agreements/power-purchase-agreements), which is another way to purchase RECs. If you estimate you need 500 MWh of electricity per year for a particular data center, you might sign a PPA to purchase 500 MWh per year from a renewable plant. You would then get all the RECs associated with this power plant.
 
 PPAs are typically very long-term contracts. A renewable plant can find financing with one of these agreements since it already has had a buyer for its electricity for many years.
 
@@ -179,20 +185,16 @@ One example of a behavior change is shifting compute to a time when more renewab
 
 ![Temporal shifting along with matching strategy](./fig/31_carbon_awareness.png "Temporal shifting along with matching strategy")
 
-::: tip
-Carbon aware computing helps organizations increase their CFE percentage.
-:::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- There are a number of methodologies commonly applied to help in the overall fight against climate change. These fall into the general categories of carbon elimination (also known as ‘abatement’), carbon avoidance (a.k.a. ‘compensating’), or carbon removal (a.k.a. ‘neutralizing’).
+- There are a number of methodologies commonly applied to help in the overall fight against climate change. These fall into the general categories of carbon elimination (also known as ‘abatement’), carbon avoidance (a.k.a. ‘compensating’), or carbon removal (a.k.a. ‘neutralising’).
 - Abatement includes increasing energy efficiency to eliminate some of the emissions associated with energy generation. Abatement is the most effective way to fight climate change although complete carbon elimination is not possible.
 - Compensating includes the adoption of renewable energy sources, sustainable living practices, recycling, planting trees etc.
-- Neutralizations refer to the removal and permanent storage of atmospheric carbon to counterbalance the effect of releasing CO2 into the atmosphere. Neutralizations tend to remove the carbon from the atmosphere in the short and medium-term.
-- An organization can call itself Carbon Neutral when its total emissions are matched by the total of its emissions offsets through carbon reduction projects
-- Net zero aims to eliminate emissions and only offset the residual emissions that you cannot eliminate to reach the 1.5°C target set by the Paris Climate Agreement.
-- The SCI is carefully designed so that eliminating emissions, through energy efficiency, hardware efficiency and carbon awareness is the only way to reduce the score. Together with a separate neutralization strategy, it can form the basis of a net-zero strategy for an organization.
-- When organizations set a target of 100% renewable power, they can either be “matched by” vs. “powered by” renewables, where “powered by” means the energy the device receives only originates from renewable sources. This can be achieved by purchasing RECs as part of a PPA.
+- Neutralisations refer to the removal and permanent storage of atmospheric carbon to counterbalance the effect of releasing CO2 into the atmosphere. Neutralisations tend to remove the carbon from the atmosphere in the short and medium-term.
+- An organisation can call itself Carbon Neutral when its total emissions are matched by the total of its emissions offsets through carbon reduction projects
+- Net zero aims to eliminate emissions and only offset the residual emissions that you cannot eliminate to reach the 1.5&deg;C target set by the Paris Climate Agreement.
+- When organisations set a target of 100% renewable power, they can either be “matched by” vs. “powered by” renewables, where “powered by” means the energy the device receives only originates from renewable sources. This can be achieved by purchasing RECs as part of a PPA.
 - 24/7 hourly matching is one of the many strategies we need to employ to help accelerate the transition to a 100% renewable-powered grid.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
