@@ -341,7 +341,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Measurement</h1>
-        <p>Last updated on 2025-03-01 |
+        <p>Last updated on 2025-03-03 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -508,8 +508,8 @@ Points to add:
 - To use this to estimate Scope 2 emissions, you also need the carbon intensity of electricity generation for the facility
 - A small but growing number may provide estimates of Upstream Scope 3 emissions which can be amortised across the service lifetime to estimate the per-job emissions
 
---><p>Quantifying your emissions (and generating an emissions rate for your
-work as described below) are critical steps on the path to reducing and
+--><p>Quantifying the emissions from your work (and generating an emissions
+rate, as described below) are critical steps on the path to reducing and
 potentially eliminating emissions from your use of HPC systems. The
 formula for calculating your emissions from use of HPC systems
 (<code>HPC-E</code>) is straightforward:</p>
@@ -527,7 +527,7 @@ HPC use - even for a full lifetime of an HPC service.</p>
 it buckets them into <strong>operational emissions</strong> (carbon
 emissions from the electricity required for your HPC use, represented by
 <code>E * I</code>) and <strong>embodied emissions</strong> (carbon
-emissions from the physical HPC resources, represented by
+emissions from the physical HPC system components, represented by
 <code>M</code>).</p>
 <p>Follow these steps to calculate your HPC emissions.</p>
 <ol style="list-style-type: decimal"><li>Gather your energy use - this can be measured or estimated and is
@@ -539,10 +539,187 @@ HPC</li>
 <li>Compute your total HPC emissions</li>
 </ol><div class="section level3">
 <h3 id="gather-energy-use">1. Gather energy use<a class="anchor" aria-label="anchor" href="#gather-energy-use"></a></h3>
-<!-- TODO: how do you estimate Scope 2 emissions from your use of HPC (remember to add overheads!) -->
+<p>Many HPC systems now provide energy use data for jobs run on the
+system. If this is the case, you can use these as the starting point for
+calculating your energy use of HPC resources. If this is not available,
+then you may need to estimate the energy use of your use of resources
+from component power draw. Even if you have energy use data available
+this may only cover energy use of compute nodes (or even processors on
+compute nodes) so you do typically have to do some estimation of power
+draw of other components to know how much extra energy to add on to
+include them in your calculation.</p>
+<p>If you are really lucky, the HPC system staff will have done this
+calculation for you. As has been done for the UK National Supercomputing
+Service, ARCHER2: <a href="https://docs.archer2.ac.uk/user-guide/energy/#scope-2-emissions" class="external-link">Estimating
+emissions from ARCHER2</a></p>
+<p>We will cover two different ways to estimate the power draw of HPC
+systems which can then be used to compute energy use.</p>
+<ol style="list-style-type: lower-alpha"><li>Use the total power draw of the system</li>
+<li>Use the per-component power draw of the system</li>
+</ol><div id="heterogeneous-systems" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="heterogeneous-systems" class="callout-inner">
+<h3 class="callout-title">Heterogeneous systems</h3>
+<div class="callout-content">
+<p>The methodologies outlined below all assume the compute nodes are
+heterogeneous. What do you do if this is not the case and some nodes on
+the system have GPU and others do not, for example? In this case, you
+should try, as much as possible, to treat each homogeneous partition as
+its own smaller HPC system to help calculate energy use.</p>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="a--using-total-power-draw">a. Using total power draw<a class="anchor" aria-label="anchor" href="#a--using-total-power-draw"></a></h4>
+<p>One of the simplest ways to estimate your energy use is to use the
+total power draw of the HPC system and divide it by the number of
+components to get a mean power draw per component that can be used to
+estimate energy use. For example, if the total power draw of the system
+is 250 kW and it contains 512 GPU, then the mean power draw per GPU is
+<code>250 kW / 512 GPU = 0.488 kW/GPU</code>. This, in turn, means the
+energy used for 12 hours use of 2 GPU is
+<code>12 hours * 2 GPU * 0.488 kW/GPU = 11.7 kWh</code>.</p>
+<p>You should use the component that you measure resource use in to
+compute the mean power draw. For example. if your usage is measured in
+GPUh, then compute the power draw per GPU; if your usage is measured in
+nodeh, compute the power draw per node.</p>
+</div>
+<div class="section level4">
+<h4 id="b--using-per-component-power-draws">b. Using per-component power draws<a class="anchor" aria-label="anchor" href="#b--using-per-component-power-draws"></a></h4>
+<p>This approach requires more detailed information being available on
+the power draw of different components though measurement or from
+information from the vendors of the components. If you are getting your
+energy use from counters on the compute nodes (as is sometimes possible
+on HPC systems) then this approach allows you to estimate additional
+energy overheads that need to be added on in addition to the measured
+power draw.</p>
+<p>We illustrate this approach using the estimates for the ARCHER2 HPC
+system:</p>
+<table style="width:100%;" class="table"><colgroup><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"></colgroup><thead><tr class="header"><th>Component</th>
+<th align="right">Count</th>
+<th align="right">Loaded power draw per unit (kW)</th>
+<th align="right">Loaded power draw (kW)</th>
+<th align="right">% Total</th>
+<th>Notes</th>
+</tr></thead><tbody><tr class="odd"><td>Compute nodes</td>
+<td align="right">5,860 nodes</td>
+<td align="right">0.41</td>
+<td align="right">2,400</td>
+<td align="right">85%</td>
+<td>Measured by on system counters</td>
+</tr><tr class="even"><td>Interconnect switches</td>
+<td align="right">768 switches</td>
+<td align="right">0.24</td>
+<td align="right">240</td>
+<td align="right">9%</td>
+<td>Measured by on system counters</td>
+</tr><tr class="odd"><td>Lustre storage</td>
+<td align="right">5 file systems</td>
+<td align="right">8</td>
+<td align="right">40</td>
+<td align="right">1%</td>
+<td>Estimate from vendor</td>
+</tr><tr class="even"><td>NFS storage</td>
+<td align="right">4 file systems</td>
+<td align="right">8</td>
+<td align="right">32</td>
+<td align="right">1%</td>
+<td>Estimate from vendor</td>
+</tr><tr class="odd"><td>Coolant distribution units</td>
+<td align="right">6 CDU</td>
+<td align="right">16</td>
+<td align="right">96</td>
+<td align="right">3%</td>
+<td>Estimate from vendor</td>
+</tr><tr class="even"><td>Total</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">2,808</td>
+<td align="right">99%</td>
+<td></td>
+</tr></tbody></table><p>In this case, we have a mix of data measured on the system (power
+draw of the compute nodes and power draw of the interconnect switches)
+and estimates from the vendor (storage systems and CDU). Here, the total
+power draw is estimated at 2,808 kW, there are 5,860 compute nodes and
+the unit of resource is nodeh so we can calculate the mean per node
+power draw (including all the components in the table) in the same way
+as we did for method (a) with
+<code>2,808 kW / 5,860 nodes = 0.480 kW/node</code> and use this to
+compute energy consumption based on how many nodeh we use.</p>
+<p>However, on ARCHER2 we also have the total compute node energy use
+available per job to users from the Slurm scheduler. The table above
+shows that the compute nodes contribute around 85% of the total power
+draw of ARCHER2 (of the components included) so an alternative method to
+compute the energy use is to use the measurement from the scheduler and
+add an additional 15% to cover the energy used by other components. This
+is, in fact, the methodology used for computing per job energy use on
+ARCHER2.</p>
+</div>
+<div class="section level4">
+<h4 id="add-in-energy-from-plant-overheads">Add in energy from plant overheads<a class="anchor" aria-label="anchor" href="#add-in-energy-from-plant-overheads"></a></h4>
+<p>As well as the energy used by the system itself, there is also the
+energy used by the plant that supplies power and cooling to the HPC
+system. Different data centres have different sizes of overheads and
+this is given by PUE (Power Use Efficiency). For example, a PUE of 1.25
+indicates that an additional 25% energy use is added on top of the
+system energy use to account for the plant.</p>
+<p>The PUE will vary with outside weather conditions at the data centre.
+For the ARCHER2 example, PUE is typically less than 10% so, s a
+conservative estimate, they add an additional 10% energy use to the
+total to account for plant overheads.</p>
+</div>
 </div>
 <div class="section level3">
 <h3 id="determine-local-carbon-intensity">2. Determine local carbon intensity<a class="anchor" aria-label="anchor" href="#determine-local-carbon-intensity"></a></h3>
+<p>Once you have your energy use then you need to convert this to
+emissions using the carbon intensity for the electricity supply for the
+HPC system. In most cases, HPC systems are powered by the energy grid
+and many energy grids provide details on the carbon intensity as a
+function of time.</p>
+<p>For the UK, the carbon intensity is dependent on location and time.
+You can access the values through different web services but one that is
+commonly used is the <a href="https://carbonintensity.org.uk" class="external-link">Carbon
+Intensity API</a>. Carbon intensity is reported for every region every
+30 minute interval. To estimate your emissions you can either use the
+fine grained intensity matched to the run times of your HPC system use
+or use an aggregate value over a longer period. The aggregate value is a
+simpler choice for a first estimate. The table below shows the mean
+carbon intensities for the different regions of the UK national grid for
+2024 ordered from lowest to highest.</p>
+<table class="table"><thead><tr class="header"><th>Region</th>
+<th align="right">Mean 2024 CI (gCOe/kWh)</th>
+</tr></thead><tbody><tr class="odd"><td>NE England</td>
+<td align="right">22</td>
+</tr><tr class="even"><td>S Scotland</td>
+<td align="right">26</td>
+</tr><tr class="odd"><td>N Scotland</td>
+<td align="right">30</td>
+</tr><tr class="even"><td>NW England</td>
+<td align="right">48</td>
+</tr><tr class="odd"><td>N Wales</td>
+<td align="right">77</td>
+</tr><tr class="even"><td>E England</td>
+<td align="right">108</td>
+</tr><tr class="odd"><td>London</td>
+<td align="right">125</td>
+</tr><tr class="even"><td>W Midlands</td>
+<td align="right">125</td>
+</tr><tr class="odd"><td>SE England</td>
+<td align="right">135</td>
+</tr><tr class="even"><td>Yorkshire</td>
+<td align="right">135</td>
+</tr><tr class="odd"><td>S England</td>
+<td align="right">186</td>
+</tr><tr class="even"><td>E Midlands</td>
+<td align="right">203</td>
+</tr><tr class="odd"><td>SW England</td>
+<td align="right">242</td>
+</tr><tr class="even"><td>S Wales</td>
+<td align="right">255</td>
+</tr></tbody></table><p>For the UK, where you place your HPC system can have a tenfold impact
+on emissions from energy use.</p>
 </div>
 <div class="section level3">
 <h3 id="determine-embodied-emissions">3. Determine embodied emissions<a class="anchor" aria-label="anchor" href="#determine-embodied-emissions"></a></h3>
@@ -719,9 +896,9 @@ emissions.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/green-software-archer2/instructor/measurement.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/instructor/measurement.html",
-  "dateCreated": "2025-03-01",
-  "dateModified": "2025-03-01",
-  "datePublished": "2025-03-01"
+  "dateCreated": "2025-03-03",
+  "dateModified": "2025-03-03",
+  "datePublished": "2025-03-03"
 }
 
   </script><script>
