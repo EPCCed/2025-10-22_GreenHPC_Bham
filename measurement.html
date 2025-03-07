@@ -341,7 +341,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Measurement</h1>
-        <p>Last updated on 2025-03-05 |
+        <p>Last updated on 2025-03-07 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -466,7 +466,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>Emissions from electricity used: these would be classified as Scope
 2 emissions</li>
@@ -516,7 +516,7 @@ formula for calculating your emissions from use of HPC systems
 <code>E</code> = Energy consumed by HPC use (in kWh)</li>
 <li>
 <code>I</code> = Location-based marginal carbon intensity (in
-kgCO2/kWh)</li>
+kgCO<sub>2</sub>/kWh)</li>
 <li>
 <code>M</code> = Embodied emissions</li>
 </ul><p>You can calculate this on a per job basis or for a larger grouping of
@@ -667,7 +667,13 @@ system energy use to account for the plant.</p>
 For the ARCHER2 example, PUE is typically less than 10% so, s a
 conservative estimate, they add an additional 10% energy use to the
 total to account for plant overheads.</p>
-</div>
+<p>So, for the ARCHER2 example, the process for computing your total
+energy use becomes:</p>
+<ul><li>Measure total energy use from all jobs run</li>
+<li>Add 15% extra energy to cover energy use from other components</li>
+<li>Add another 10% energy use top of this new total to cover plant
+overheads</li>
+</ul></div>
 </div>
 <div class="section level3">
 <h3 id="determine-local-carbon-intensity">2. Determine local carbon intensity<a class="anchor" aria-label="anchor" href="#determine-local-carbon-intensity"></a></h3>
@@ -722,11 +728,145 @@ on emissions from energy use.</p>
 </div>
 <div class="section level3">
 <h3 id="determine-embodied-emissions">3. Determine embodied emissions<a class="anchor" aria-label="anchor" href="#determine-embodied-emissions"></a></h3>
-<!-- Emphasise this is Upstream Scope 3-->
-<!-- TODO: how do you estimate Scope 3 emissions from your use of HPC.  -->
+<div id="upstream-scope-3-emissions" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="upstream-scope-3-emissions" class="callout-inner">
+<h3 class="callout-title">Upstream Scope 3 emissions</h3>
+<div class="callout-content">
+<p>Remember that we are considering only <em>upstream</em> Scope3
+emissions here. The emissions from electricity use are captured in the
+Scope 2 emissions estimates.</p>
+</div>
+</div>
+</div>
+<p>Calculating the embodied emissions can be more difficult than the
+operational emissions from energy consumption as it can be more
+difficult to get information on embodied emissions from hardware. You
+may, of course, be lucky and the HPC system you are using could already
+provide estimates of the embodied emissions which you can use.</p>
+<p>If you need to estimate this yourself, the major contributors to
+embodied emissions are likely to be:</p>
+<ul><li>Compute nodes</li>
+<li>Interconnect switches</li>
+<li>Storage</li>
+</ul><p>so these are the best place to start. Bear in mind that each HPC
+system is different so other components may need to be taken into
+account. As a rule of thumb, you should look at the HPC system to see
+which components there are lots of and use that as the starting place.
+Complex components (such as nodes, storage and switches) are likely to
+have much higher embodied emissions than simpler components (pumps,
+fans, cables etc.).</p>
+<p>As an example, here is how we have estimated embodied emissions for
+ARCHER2:</p>
+<table style="width:100%;" class="table"><colgroup><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"><col width="16%"></colgroup><thead><tr class="header"><th>Component</th>
+<th align="right">Count</th>
+<th align="right">Estimated kgCO<sub>2</sub>e per unit</th>
+<th align="right">Estimated kgCO<sub>2</sub>e</th>
+<th align="right">% Total Scope 3</th>
+<th>References</th>
+</tr></thead><tbody><tr class="odd"><td>Compute nodes</td>
+<td align="right">5,860 nodes</td>
+<td align="right">1,100</td>
+<td align="right">6,400,000</td>
+<td align="right">84%</td>
+<td>(1)</td>
+</tr><tr class="even"><td>Interconnect switches</td>
+<td align="right">768 switches</td>
+<td align="right">280</td>
+<td align="right">150,000</td>
+<td align="right">2%</td>
+<td>(2)</td>
+</tr><tr class="odd"><td>Lustre HDD</td>
+<td align="right">19,759,200 GB</td>
+<td align="right">0.02</td>
+<td align="right">400,000</td>
+<td align="right">6%</td>
+<td>(3)</td>
+</tr><tr class="even"><td>Lustre SSD</td>
+<td align="right">1,900,800 GB</td>
+<td align="right">0.16</td>
+<td align="right">300,000</td>
+<td align="right">4%</td>
+<td>(3)</td>
+</tr><tr class="odd"><td>NFS HDD</td>
+<td align="right">3,240,000 GB</td>
+<td align="right">0.02</td>
+<td align="right">70,000</td>
+<td align="right">1%</td>
+<td>(3)</td>
+</tr><tr class="even"><td>Total</td>
+<td align="right"></td>
+<td align="right"></td>
+<td align="right">7,320,000</td>
+<td align="right">100%</td>
+<td></td>
+</tr></tbody></table><p>References:</p>
+<ol style="list-style-type: decimal"><li><a href="https://doi.org/10.5281/zenodo.7692451" class="external-link">IRISCAST Final
+Report</a></li>
+<li>Estimate taken from IBM z16™ multi frame 24-port Ethernet Switch
+Product Carbon Footprint</li>
+<li><a href="https://arxiv.org/abs/2207.10793" class="external-link">Tannu and Nair,
+2023</a></li>
+</ol><p>Note that there is a large amount of uncertainty for Scope 3
+emissions due to lack of high quality embodied emissions data. The
+number used for the compute node emissions is at the high end of
+estimated values for a CPU-only compute node and the actual value could
+be as much as 15% lower at around 900 kgCO<sub>2</sub>e/node. If the
+lower value is used, it reduces the overall estimated embodied emissions
+but does not significantly change the fraction of emissions attributed
+to the compute nodes.</p>
+<div id="other-embodied-emissions-sources" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="other-embodied-emissions-sources" class="callout-inner">
+<h3 class="callout-title">Other embodied emissions sources</h3>
+<div class="callout-content">
+<p>We have not included embodied emissions associated with the data
+centre buildings and plant in the analysis above. <a href="https://doi.org/10.5281/zenodo.7692450" class="external-link">The IRISCAST report</a>
+mentioned above provides an evaluation of these values. While the total
+embodied emissions can be high for these items, their long lifespan
+means that their contribution to the embodied emissions during the
+lifespan of a particular HPC system are generally much less significant
+than the embodied emissions from the HPC system hardware itself.</p>
+</div>
+</div>
+</div>
+<!-- TODO: Add exercise on computing embodied emissions for a different (GPU-based) system -->
 </div>
 <div class="section level3">
 <h3 id="compute-your-total-hpc-emissions">4. Compute your total HPC emissions<a class="anchor" aria-label="anchor" href="#compute-your-total-hpc-emissions"></a></h3>
+<p>Now we should have all the data we need to compute our total
+emissions from HPC system use:</p>
+<ul><li>
+<code>E</code> - Total energy used</li>
+<li>
+<code>I</code> - Carbon intensity</li>
+<li>
+<code>M</code> - Embodied emissions estimate</li>
+</ul><p>Remember the equation for computing total emissions from HPC system
+use (<code>HPC-E</code>):</p>
+<pre><code><span><span class="va">HPC</span><span class="op">-</span><span class="va">E</span> <span class="op">=</span> <span class="op">(</span><span class="va">E</span> <span class="op">*</span> <span class="va">I</span><span class="op">)</span> <span class="op">+</span> <span class="va">M</span></span></code></pre>
+<p>we can plug the numbers in and come up with a value for the total
+emissions arising from our use of HPC.</p>
+<div id="e-i-on-a-per-job-basis" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="e-i-on-a-per-job-basis" class="callout-inner">
+<h3 class="callout-title">
+<code>E * I</code> on a per job basis</h3>
+<div class="callout-content">
+<p>Rather than computing total energy use and then using an aggregate
+value for the carbon intensity, it may make more sense to compute
+<code>E * I</code> on a per-job basis using the carbon intensity value
+at the job time.</p>
+</div>
+</div>
+</div>
+<!-- TODO: Add exercise to compute total emissions from HPC system use -->
 </div>
 </section><section><h2 class="section-heading" id="hpc-carbon-intensity-hpc-ci-specification">HPC Carbon Intensity (HPC-CI) specification<a class="anchor" aria-label="anchor" href="#hpc-carbon-intensity-hpc-ci-specification"></a></h2>
 <hr class="half-width"><p>We now describe a methodology (the HPC Carbon Intensity
@@ -895,9 +1035,9 @@ emissions.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/green-software-archer2/measurement.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/measurement.html",
-  "dateCreated": "2025-03-05",
-  "dateModified": "2025-03-05",
-  "datePublished": "2025-03-05"
+  "dateCreated": "2025-03-07",
+  "dateModified": "2025-03-07",
+  "datePublished": "2025-03-07"
 }
 
   </script><script>
