@@ -549,7 +549,7 @@ largest source of emissions will be to the smallest?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may have come up with activities from the following list:</p>
 <ul>
@@ -1831,7 +1831,7 @@ decide how to maximise your carbon efficiency.</li>
 </div>
 </section></section><section id="aio-measurement"><p>Content from <a href="measurement.html">Measurement</a></p>
 <hr>
-<p>Last updated on 2025-03-07 |
+<p>Last updated on 2025-03-10 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2494,9 +2494,9 @@ manufacturer and all their cars they produce every year.</p>
 HPC-CI rate by purchasing offsets in the form of neutralisations,
 compensations, or by offsetting electricity in the form of renewable
 energy credits (we will cover this in more detail in the next section of
-the workshop). This means that HPC services or use that makes no effort
-toward reducing its emissions but spends money on carbon credits cannot
-reduce their HPC-CI rate.</p>
+the workshop). This means that HPC system use that makes no effort
+toward reducing emissions but spends money on carbon credits cannot
+reduce the associated HPC-CI rate.</p>
 <p>Offsets are an essential component of any climate strategy; however,
 offsets are not eliminations and therefore are not included in the
 HPC-CI metric.</p>
@@ -2543,12 +2543,35 @@ HPC</li>
 <div class="section level3">
 <h3 id="select-your-functional-unit-r">5. Select your functional unit (<code>R</code>)<a class="anchor" aria-label="anchor" href="#select-your-functional-unit-r"></a>
 </h3>
-<!-- TODO: give concrete example for a specific application -->
+<p>As we have seen, the HPC-CI is a rate rather than a total and
+measures the intensity of emissions according to the chosen functional
+unit. The specification currently does not prescribe the functional unit
+and you are free to pick whichever best describes the output from your
+use of HPC systems. For example, this could be a metric from the
+software you use (ns simulated, number of years simulated, iterations)
+or a metric tied to research progress (number of compounds modelled,
+data points analysed). There may also be ideas in literature related to
+your research area of what a good choice may be. You may want to trial
+different functional units to see which one works best for your
+work.</p>
+<p>As a concrete example, imagine that you are simulating the dynamics
+of a biomolecular system (using software such as GROMACS, Amber or NAMD)
+then you could well chose the number of ns simulated as your functional
+unit.</p>
 </div>
 <div class="section level3">
 <h3 id="calculate-hpc-ci-rate">6. Calculate HPC-CI rate<a class="anchor" aria-label="anchor" href="#calculate-hpc-ci-rate"></a>
 </h3>
-<!-- TODO: simples! total emissions divided by number of functional units. Note: this can be quite different depending on different hardware, e.g. your output could be very different on a GPU system - can we have an example to show this, maybe an exercise with CPU v GPU for MD or something similar -->
+<p>Now you have both the total emisssions for your use of HPC systems
+and the number of functional units arising from the same use of HPC
+systems you can calculate the HPC-CI by dividing the total emissions by
+the total number of functional units.</p>
+<p>To continue our example of biomolecular simulation that we mentioned
+above, we would take the total emissions from our HPC system use - let
+us say this came out to be 1500 kgCO<sub>2</sub>e - and the total number
+of functional units - say 950 ns simulated - and combine them:</p>
+<pre><code>HPC-CI  = 1500 kgCO2e / 950 ns = 1.58 kgCO2e/ns</code></pre>
+<!-- TODO: Add exercise on calculating HPC-CI -->
 </div>
 </section><section><h2 class="section-heading" id="estimating-emissions-associated-with-future-use-of-hpc-systems">Estimating emissions associated with future use of HPC systems<a class="anchor" aria-label="anchor" href="#estimating-emissions-associated-with-future-use-of-hpc-systems"></a>
 </h2>
@@ -3087,9 +3110,9 @@ to help accelerate the transition to a 100% renewable-powered grid.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/green-software-archer2/aio.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/aio.html",
-  "dateCreated": "2025-03-07",
-  "dateModified": "2025-03-07",
-  "datePublished": "2025-03-07"
+  "dateCreated": "2025-03-10",
+  "dateModified": "2025-03-10",
+  "datePublished": "2025-03-10"
 }
 
   </script><script>
