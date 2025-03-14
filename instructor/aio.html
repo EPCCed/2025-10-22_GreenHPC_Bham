@@ -1840,7 +1840,7 @@ decide how to maximise your carbon efficiency.</li>
 </div>
 </section></section><section id="aio-measurement"><p>Content from <a href="measurement.html">Measurement</a></p>
 <hr>
-<p>Last updated on 2025-03-10 |
+<p>Last updated on 2025-03-14 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1973,7 +1973,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity used: these would be classified as Scope
@@ -2489,6 +2489,19 @@ at the job time.</p>
 </section><section><h2 class="section-heading" id="hpc-carbon-intensity-hpc-ci-specification">HPC Carbon Intensity (HPC-CI) specification<a class="anchor" aria-label="anchor" href="#hpc-carbon-intensity-hpc-ci-specification"></a>
 </h2>
 <hr class="half-width">
+<div id="software-carbon-intensity-sci" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="software-carbon-intensity-sci" class="callout-inner">
+<h3 class="callout-title">Software Carbon Intensity (SCI)</h3>
+<div class="callout-content">
+<p>The definition, application and calculation of the HPC-CI is heavily
+inspired by the <a href="https://sci.greensoftware.foundation/" class="external-link">Software
+Carbon Intensity (SCI)</a> from the Green Software Foundation.</p>
+</div>
+</div>
+</div>
 <p>We now describe a methodology (the HPC Carbon Intensity
 specification, HPC-CI) to calculate your emissions from HPC system use
 and to encourage action towards eliminating emissions.</p>
@@ -2568,6 +2581,9 @@ work.</p>
 of a biomolecular system (using software such as GROMACS, Amber or NAMD)
 then you could well chose the number of ns simulated as your functional
 unit.</p>
+<p>You can use multiple functional units simultaneously to have multiple
+HPC-CI values for your use of HPC systems. Different HPC-CI units may be
+more or less useful in different contexts.</p>
 </div>
 <div class="section level3">
 <h3 id="calculate-hpc-ci-rate">6. Calculate HPC-CI rate<a class="anchor" aria-label="anchor" href="#calculate-hpc-ci-rate"></a>
@@ -2582,39 +2598,26 @@ us say this came out to be 1500 kgCO<sub>2</sub>e - and the total number
 of functional units - say 950 ns simulated - and combine them:</p>
 <pre><code>HPC-CI  = 1500 kgCO2e / 950 ns = 1.58 kgCO2e/ns</code></pre>
 <!-- TODO: Add exercise on calculating HPC-CI -->
+<div id="estimating-emissions-associated-with-future-use-of-hpc-systems" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
 </div>
-</section><section><h2 class="section-heading" id="estimating-emissions-associated-with-future-use-of-hpc-systems">Estimating emissions associated with future use of HPC systems<a class="anchor" aria-label="anchor" href="#estimating-emissions-associated-with-future-use-of-hpc-systems"></a>
-</h2>
-<hr class="half-width">
-<!-- TODO: You can use the HPC-CI rate you calculated... --></section><section><h2 class="section-heading" id="how-can-the-hpc-ci-rate-be-reduced">How can the HPC-CI rate be reduced?<a class="anchor" aria-label="anchor" href="#how-can-the-hpc-ci-rate-be-reduced"></a>
-</h2>
-<hr class="half-width">
-<ul>
-<li><p>Depends a bit on whether the operational emissions or embodied
-emissions dominate</p></li>
-<li>
-<p>Operational emissions dominate:</p>
-<ul>
-<li>Improve the energy efficiency of your use (e.g. power caps,
-different algorithms)</li>
-<li>Temporal shifting - run when carbon intensity is lower</li>
-<li>Spatial shifting - run on system where carbon intensity is lower,
-run on hardware which has better energy efficiency for your use case
-(e.g. GPU may be more energy efficient for your use)</li>
-</ul>
-</li>
-<li>
-<p>Embodied emissions dominate:</p>
-<ul>
-<li>Make your use more performant - more output per unit of time (even
-at the expense of energy efficiency)</li>
-<li>Extend the lifetime of the HPC system (reduced emissions due to
-longer amortisation)</li>
-<li>Spatial shifting - run on system which has lower embodied emissions
-rate for your use</li>
-</ul>
-</li>
-</ul>
+<div id="estimating-emissions-associated-with-future-use-of-hpc-systems" class="callout-inner">
+<h3 class="callout-title">Estimating emissions associated with future use of HPC systems</h3>
+<div class="callout-content">
+<p>As well as using the HPC-CI metric as a tool to help quantify and
+reduce your emissions from HPC system use it can also be used to project
+the emissions from HPC system use from future or planned projects. Many
+funding bodies are starting to ask for emissions estimates as part of
+the submission process. Calculating HPC-CI values can help you provide
+these estimates.</p>
+</div>
+</div>
+</div>
+<p>Now we understand how to estimate our emissions (HPC-E) and how to
+define a useful metric to understand our emissions rate linked to some
+concrete output from our use of HPC systems (HPC-CI). The next section
+looks at how emissions can be reduced and, ideally, eliminated.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2638,6 +2641,7 @@ from HPC systems and is a rate rather than a total. This can be used to
 measure improvements in emissions efficiency and drive reductions in
 emissions.</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
@@ -3121,9 +3125,9 @@ to help accelerate the transition to a 100% renewable-powered grid.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/green-software-archer2/instructor/aio.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/instructor/aio.html",
-  "dateCreated": "2025-03-10",
-  "dateModified": "2025-03-11",
-  "datePublished": "2025-03-11"
+  "dateCreated": "2025-03-14",
+  "dateModified": "2025-03-14",
+  "datePublished": "2025-03-14"
 }
 
   </script><script>
