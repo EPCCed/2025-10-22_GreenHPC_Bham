@@ -811,7 +811,7 @@ from.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may have come up with outcomes such as:</p>
 </div>
@@ -879,7 +879,7 @@ so it could be included in a carbon audit of your work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You may have come up with outcomes such as:</p>
 </div>
@@ -916,7 +916,7 @@ least amount of carbon possible per unit of work</strong>.</li>
 </div>
 </section></section><section id="aio-energy-efficiency"><p>Content from <a href="energy-efficiency.html">Energy Efficiency</a></p>
 <hr>
-<p>Last updated on 2025-03-15 |
+<p>Last updated on 2025-03-17 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/energy-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1087,7 +1087,6 @@ emissions.</p>
 </div>
 </div>
 </div>
-<!-- Put in exercise here on estimating emissions from ARCHER2 electricity use in different carbon intensity regimes -->
 <div id="exercise-carbon-emissions-from-hpc-systems" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1123,10 +1122,10 @@ ARCHER2 operations in the three different emissions regimes?</p>
 <p>Clean energy comes from renewable, zero-emission sources that do not
 pollute the atmosphere when used and save energy through
 energy-efficient practices. There are overlaps between clean, green, and
-renewable energy. Here’s how we can differentiate between them:</p>
+renewable energy. Here is how we can differentiate between them:</p>
 <ul>
 <li>
-<strong>Clean energy</strong> - doesn’t produce carbon emissions
+<strong>Clean energy</strong> - does not produce carbon emissions
 e.g. nuclear.</li>
 <li>
 <strong>Green energy</strong> - sources from nature</li>
@@ -1150,15 +1149,15 @@ commonly used instead of J) corresponding to one kilowatt of power
 sustained for one hour.</li>
 </ul>
 </div>
-</section><section><h2 class="section-heading" id="how-to-improve-energy-efficiency">How to improve energy efficiency<a class="anchor" aria-label="anchor" href="#how-to-improve-energy-efficiency"></a>
+</section><section><h2 class="section-heading" id="factors-that-impact-energy-efficiency">Factors that impact energy efficiency<a class="anchor" aria-label="anchor" href="#factors-that-impact-energy-efficiency"></a>
 </h2>
 <hr class="half-width">
 <p>Now that we know how energy is produced and the associated cost in
 terms of emissions, based on whether low- or high-carbon energy sources
-are used, let’s take a look at some of the ways energy efficiency can be
-improved on HPC systems. Understanding power usage effectiveness and
-energy proportionality means you can make better decisions in terms of
-how to use energy in the most efficient way possible and waste less.</p>
+are used. There are other concepts associated with operating HPC
+services that impact how much energy is used and so our energy
+efficiency. In particular, <em>Power Usage Effectiveness (PUE)</em> and
+<em>Energy proportiionality</em>.</p>
 <div class="section level3">
 <h3 id="power-usage-effectiveness">Power usage effectiveness<a class="anchor" aria-label="anchor" href="#power-usage-effectiveness"></a>
 </h3>
@@ -1190,12 +1189,12 @@ cooler locations can often make use of “free cooling” where
 refrigeration technology is not required to cool the system, the outside
 air (or water) temperature is cool enough to do this without the need
 for mechanical cooling.</p>
-<div id="callout3" class="callout">
+<div id="archer2-pue" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div id="archer2-pue" class="callout-inner">
+<h3 class="callout-title">ARCHER2 PUE</h3>
 <div class="callout-content">
 <p>The PUE of the Advanced Data Centre (ACF) facility that hosts the
 ARCHER2 system in Edinburgh typically has a PUE of 1.1 as measured over
@@ -1218,12 +1217,13 @@ utilisation).</p>
 usually given as a percentage. A fully utilised computer running at its
 maximum capacity has a high percentage, while an idle computer with no
 utilisation has a lower percentage.</p>
-<p>The relationship between power and utilization is not proportional.
-Mathematically speaking, proportionality between two variables means
-their ratios are equivalent. For example, at 0% utilisation, a computer
-may draw 100 W; at 50%, it draws 180 W; and at 100%, it draws 200 W. The
-relationship between power consumption and utiliation is not linear and
-does not cross the origin.</p>
+<p>The relationship between power and utilisation is not linearly
+proportional. Mathematically speaking, linear proportionality between
+two variables means their ratios are equivalent. As an example of the
+nonlinear realtionship between utilisation and power draw, at 0%
+utilisation, a computer may draw 100 W; at 50%, it draws 180 W; and at
+100%, it draws 200 W. The relationship between power consumption and
+utiliation is not linear and does not cross the origin.</p>
 <figure><img src="./fig/06_energy_proportionality_updated.png" title="Schematic graph showing relationship between power draw and utilisation of computer infrastructure" alt="Schematic graph showing relationship between power draw and utilisation of computer infrastructure" class="figure mx-auto d-block"><div class="figcaption">Schematic graph showing relationship between
 power draw and utilisation of computer infrastructure</div>
 </figure><p>Because of this, the more we utilise a computer, the more efficient
@@ -1248,7 +1248,10 @@ useful performance so this is just wasted electricity, reducing the
 energy efficiency of your use. It becomes even more complex as you run
 parallel applications (as typically happens on HPC resources) as the
 change in parallel distribution can change the balance between compute
-bound and memory bound performance for your application.</p>
+bound and memory bound performance for your application; meaning that
+you may need to choose different strategies to maximise energy
+efficiency at different parallelisations even for the same problem and
+software.</p>
 <div id="hpc-application-performance" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1268,16 +1271,6 @@ perform.</p>
 </div>
 </div>
 </div>
-<p>Given this complexity, what practical steps can you take to decide on
-how to run in an energy-efficient manner on HPC systems? The answer is
-to run some test cases and measure the energy consumption and
-performance, then change parameters (such as processor power cap, or
-number of parallel processes) and measure again to see what the impact
-is on both performance and energy consumption. Using a benchmarking
-approach such as this, you can practically improve the energy efficiency
-of your use of HPC.</p>
-<!-- Show effect of reducing processor performance on energy efficiency on ARCHER2 -->
-<!-- Exercise with energy use and performance data, attendees to use this to propose the most energy efficienct configuration for a simulation run -->
 <div class="section level4">
 <h4 id="static-power-draw">Static power draw<a class="anchor" aria-label="anchor" href="#static-power-draw"></a>
 </h4>
@@ -1297,6 +1290,55 @@ rapidly changing demands, which leads to many servers in idle modes
 during low-demand periods. An idle server has a carbon cost from both
 the embedded carbon as well as its inefficient utilisation. This is one
 reason why the goal of many HPC systems is to maximise utilisation.</p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="practical-advice">Practical advice<a class="anchor" aria-label="anchor" href="#practical-advice"></a>
+</h3>
+<p>Given this complexity, what practical steps can you take to decide on
+how to run in an energy-efficient manner on HPC systems? The answer is
+to run some test cases and measure the energy consumption and
+performance, then change parameters (such as processor power cap, or
+number of parallel processes) and measure again to see what the impact
+is on both performance and energy consumption. Using a benchmarking
+approach such as this, you can practically improve the energy efficiency
+of your use of HPC.</p>
+<p>If you happen to be a developer of the software you are using then
+you may also be able to change the algorithms, data layout and other
+aspects of the software to improve energy efficiency. Such approaches
+are beyond the scope of this workshop but benchmarking energy
+consumption also form a core component of this work.</p>
+<div id="exercise-carbon-emissions-from-hpc-systems-1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-carbon-emissions-from-hpc-systems-1" class="callout-inner">
+<h3 class="callout-title">Exercise: Carbon emissions from HPC systems</h3>
+<div class="callout-content">
+<p>An application (GROMACS) running on ARCHER2 has the following
+performance characteristics and energy use at different node counts and
+different CPU frequency settings. What is the most energy efficient
+combination of node count and CPU frequency for these types of
+calculations, what is the worst and how large is the percentage
+difference between the best and worst cases?</p>
+<div class="line-block"> | 2.0 GHz | | 2.25 GHz + boost | |<br>
+Node count | ns/day | kWh | ns/day | kWh |</div>
+<p>|—:|—:|—:|—:|—:| | 1 | 12 | 1000 | 15 | 2200 |</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>TBC</p>
+</div>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1326,7 +1368,6 @@ into useful operations the more it’s used.</li>
 <li>Understanding this gives us a better insight into how your HPC use
 behaves with respect to energy consumption in the real world.</li>
 </ul>
-</div>
 </div>
 </div>
 </div>
@@ -3341,9 +3382,9 @@ consumption of HPC resources.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/green-software-archer2/aio.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/aio.html",
-  "dateCreated": "2025-03-15",
-  "dateModified": "2025-03-15",
-  "datePublished": "2025-03-15"
+  "dateCreated": "2025-03-17",
+  "dateModified": "2025-03-17",
+  "datePublished": "2025-03-17"
 }
 
   </script><script>
