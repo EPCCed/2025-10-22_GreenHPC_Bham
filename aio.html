@@ -549,7 +549,7 @@ largest source of emissions will be to the smallest?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may have come up with activities from the following list:</p>
 <ul>
@@ -916,7 +916,7 @@ least amount of carbon possible per unit of work</strong>.</li>
 </div>
 </section></section><section id="aio-energy-efficiency"><p>Content from <a href="energy-efficiency.html">Energy Efficiency</a></p>
 <hr>
-<p>Last updated on 2025-03-17 |
+<p>Last updated on 2025-03-18 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/energy-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1317,13 +1317,16 @@ consumption also form a core component of this work.</p>
 <div class="callout-content">
 <p>An application (GROMACS) running on ARCHER2 has the following
 performance characteristics and energy use at different node counts and
-different CPU frequency settings. What is the most energy efficient
-combination of node count and CPU frequency for these types of
-calculations, what is the worst and how large is the percentage
+different CPU frequency settings. What are the most energy efficient
+combinations in kWh/ns of node count and CPU frequency for these types
+of calculations, what is the worst and how large is the percentage
 difference between the best and worst cases?</p>
-<div class="line-block"> | 2.0 GHz | | 2.25 GHz + boost | |<br>
-Node count | ns/day | kWh | ns/day | kWh |</div>
-<p>|—:|—:|—:|—:|—:| | 1 | 12 | 1000 | 15 | 2200 |</p>
+<div class="line-block"> | | 2.0 GHz | | 2.25 GHz + boost | |<br>
+Node count | ns simulated | Runtime (s) | kWh | Runtime (s) | kWh
+|</div>
+<p>|—:|—:|—:|—:|—:|—:| | 1 | 0.020 | 369 | 0.0464 | 288 | 0.0464 | | 2 |
+0.020 | 198 | 0.0450 | 156 | 0.0465 | | 3 | 0.020 | 155 | 0.0438 | 109 |
+0.0465 | | 4 | 0.020 | 117 | 0.0471 | 93 | 0.0513 |</p>
 </div>
 </div>
 </div>
@@ -1334,7 +1337,20 @@ Node count | ns/day | kWh | ns/day | kWh |</div>
 </button>
 <div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
-<p>TBC</p>
+<p>We can compute the energy efficiency in kWh/ns by dividing the energy
+used by the number of ns simulated:</p>
+<div class="line-block"> | | 2.0 GHz | | 2.25 GHz + boost | |<br>
+Node count | ns simulated | Runtime (s) | kWh/ns | Runtime (s) | kWh/ns
+|</div>
+<p>|—:|—:|—:|—:|—:|—:| | 1 | 0.020 | 369 | 2.32 | 288 | 2.32 | | 2 |
+0.020 | 198 | 2.25 | 156 | 2.32 | | 3 | 0.020 | 155 | 2.19 | 109 | 2.32
+| | 4 | 0.020 | 117 | 2.36 | 93 | 2.56 |</p>
+<p>So, the most energy efficient combination is 3 nodes at 2 GHz CPU
+clock frequency and the worst is 4 nodes with 2.25 GHz + boost CPU clock
+frequency. The worst case is around 17% less energy efficient than the
+best case. While this difference may not amount to much energy for a
+single run, if hundreds or thousands of simulations are run as part of a
+project this can lead to a significant reduction in consumed energy.</p>
 </div>
 </div>
 </div>
@@ -2102,7 +2118,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity used: these would be classified as Scope
@@ -3382,7 +3398,7 @@ consumption of HPC resources.</li>
   "creativeWorkStatus": "active",
   "url": "https://EPCCed.github.io/green-software-archer2/aio.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/aio.html",
-  "dateCreated": "2025-03-17",
+  "dateCreated": "2025-03-18",
   "dateModified": "2025-03-18",
   "datePublished": "2025-03-18"
 }
