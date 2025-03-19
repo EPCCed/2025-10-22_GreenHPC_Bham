@@ -549,7 +549,7 @@ largest source of emissions will be to the smallest?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may have come up with activities from the following list:</p>
 <ul>
@@ -1307,7 +1307,7 @@ Node count | ns simulated | Runtime (s) | kWh | Runtime (s) | kWh
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>We can compute the energy efficiency in kWh/ns by dividing the energy
 used by the number of ns simulated:</p>
@@ -1875,7 +1875,7 @@ intensity and less in periods of high intensity.</li>
 </div>
 </section></section><section id="aio-hardware-efficiency"><p>Content from <a href="hardware-efficiency.html">Hardware Efficiency</a></p>
 <hr>
-<p>Last updated on 2025-01-17 |
+<p>Last updated on 2025-03-19 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/hardware-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1942,7 +1942,7 @@ the carbon pollution associated with running the system as well as the
 embodied carbon of the system must be accounted for.</p>
 <figure><img src="./fig/17_embodioed_carbon.png" title="Bar chart illustrating embodied carbon from various end-user devices" alt="Bar chart illustrating embodied carbon from various end-user devices" class="figure mx-auto d-block"><div class="figcaption">Bar chart illustrating embodied carbon from
 various end-user devices</div>
-</figure><p>Embodied carbon varies significantly between end-user devices. For
+</figure><p>Embodied carbon varies significantly between different hardware. For
 some devices, the carbon emitted during manufacturing is much higher
 than that emitted during usage, as illustrated by a <a href="https://www.ifi.uzh.ch/dam/jcr:fa4e956e-7a53-4038-98a5-00e09e2f4303/Study_Digitalization_Climate_Protection_Summary_Oct2017.pdf" class="external-link">study</a>
 from University of Zurich. As a result, the embodied carbon cost can
@@ -1969,19 +1969,20 @@ four years. Amortisation means that we can say the HPC system emits
 <p>If we take into account the embodied carbon, it is clear that by the
 time we come to install an HPC system, it’s already emitted a good deal
 of carbon. Computers also have a limited lifespan, which means they
-eventually are unable to handle modern workloads and need to be
-replaced. In these terms, hardware is a proxy for carbon, and since our
-goal is to be carbon efficient, we must also be hardware efficient.</p>
+eventually are unable to handle modern workloads, or suffer failures and
+need to be replaced. In these terms, hardware consumption is a proxy for
+carbon, and since our goal is to be carbon efficient, we must also be
+hardware efficient.</p>
 <p>There are two main approaches to hardware efficiency:</p>
 <ul>
 <li>
 <strong>Extending the lifespan</strong> of the hardware - which
-reduces the carbon emisison rate per unit of time due to
-amortisation</li>
+reduces the carbon emission rate per unit of time due to
+amortisation.</li>
 <li>
 <strong>Increasing the utilisation and performance</strong> of the
 hardware - getting more useful work out of the hardware per unit of
-time</li>
+time.</li>
 </ul>
 <div class="section level3">
 <h3 id="extending-the-lifespan-of-hardware">Extending the lifespan of hardware<a class="anchor" aria-label="anchor" href="#extending-the-lifespan-of-hardware"></a>
@@ -2053,6 +2054,8 @@ efficiency to maximise carbon efficiency</li>
 <strong>Carbon from electricity use dominates:</strong> run in as
 energy efficient manner as possible to maximise carbon efficiency</li>
 </ul>
+<p>We will look at a specific example of this balance in a later episode
+of this workshop.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
