@@ -339,7 +339,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Measurement</h1>
-        <p>Last updated on 2025-03-14 |
+        <p>Last updated on 2025-03-19 |
 
         <a href="https://github.com/EPCCed/green-software-archer2/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -466,7 +466,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li>Emissions from electricity used: these would be classified as Scope
 2 emissions</li>
@@ -528,7 +528,7 @@ use to get us to the results we use and so failed jobs (due to errors)
 or calculations that did not produce useful output must be included. On
 the positive side, one of the ways we can reduce our emissions from use
 of HPC systems is to be more careful and eliminate emissions arising
-from these types of jobs.</p>
+from these types of non-productive jobs.</p>
 </div>
 </div>
 </div>
@@ -693,50 +693,35 @@ emissions using the carbon intensity for the electricity supply for the
 HPC system. In most cases, HPC systems are powered by the energy grid
 and many energy grids provide details on the carbon intensity as a
 function of time.</p>
-<p>For the UK, the carbon intensity is dependent on location and time.
-You can access the values through different web services but one that is
-commonly used is the <a href="https://carbonintensity.org.uk" class="external-link">Carbon
-Intensity API</a>. Carbon intensity is reported for every region every
-30 minute interval. To estimate your emissions you can either use the
-fine grained intensity matched to the run times of your HPC system use
-or use an aggregate value over a longer period. The aggregate value is a
-simpler choice for a first estimate. The table below shows the mean
-carbon intensities for the different regions of the UK national grid for
-2024 ordered from lowest to highest.</p>
-<table class="table"><thead><tr class="header"><th>Region</th>
-<th align="right">Mean 2024 CI (gCOe/kWh)</th>
-</tr></thead><tbody><tr class="odd"><td>NE England</td>
-<td align="right">22</td>
-</tr><tr class="even"><td>S Scotland</td>
-<td align="right">26</td>
-</tr><tr class="odd"><td>N Scotland</td>
-<td align="right">30</td>
-</tr><tr class="even"><td>NW England</td>
-<td align="right">48</td>
-</tr><tr class="odd"><td>N Wales</td>
+<p>As we saw earlier, for the UK, the carbon intensity is dependent on
+location and time. You can access the values through different web
+services but one that is commonly used is the <a href="https://carbonintensity.org.uk" class="external-link">Carbon Intensity API</a>. Carbon
+intensity is reported for every region every 30 minute interval. To
+estimate your emissions you can either use the fine grained intensity
+matched to the run times of your HPC system use or use an aggregate
+value over a longer period. The aggregate value is a simpler choice for
+a first estimate. The table below shows the approximate average carbon
+intensities for the different regions of the UK national grid for 2024
+ordered from lowest to highest.</p>
+<table class="table"><colgroup><col width="13%"><col width="40%"><col width="46%"></colgroup><thead><tr class="header"><th>Type</th>
+<th>Regions</th>
+<th align="right">Carbon Intensity (gCO<sub>2</sub>e/kWh)</th>
+</tr></thead><tbody><tr class="odd"><td>Low</td>
+<td>N. Scotland, S. Scotland, N.E. England, N.W. England</td>
+<td align="right">22 - 48</td>
+</tr><tr class="even"><td>Low Medium</td>
+<td>N. Wales</td>
 <td align="right">77</td>
-</tr><tr class="even"><td>E England</td>
-<td align="right">108</td>
-</tr><tr class="odd"><td>London</td>
-<td align="right">125</td>
-</tr><tr class="even"><td>W Midlands</td>
-<td align="right">125</td>
-</tr><tr class="odd"><td>SE England</td>
-<td align="right">135</td>
-</tr><tr class="even"><td>Yorkshire</td>
-<td align="right">135</td>
-</tr><tr class="odd"><td>S England</td>
-<td align="right">186</td>
-</tr><tr class="even"><td>E Midlands</td>
-<td align="right">203</td>
-</tr><tr class="odd"><td>SW England</td>
-<td align="right">242</td>
-</tr><tr class="even"><td>S Wales</td>
-<td align="right">255</td>
-</tr></tbody></table><p>For the UK, where you place your HPC system can have a tenfold impact
-on emissions from energy use.</p>
-<!-- TODO: Add exercise on computing operational emissions -->
-</div>
+</tr><tr class="odd"><td>Medium</td>
+<td>E. England, London, W. Midlands, S.E. England, Yorkshire</td>
+<td align="right">108 - 135</td>
+</tr><tr class="even"><td>High Medium</td>
+<td>S. England</td>
+<td align="right">186 - 203</td>
+</tr><tr class="odd"><td>High</td>
+<td>S.W. England, S. Wales,</td>
+<td align="right">242 - 255</td>
+</tr></tbody></table></div>
 <div class="section level3">
 <h3 id="determine-embodied-emissions">3. Determine embodied emissions<a class="anchor" aria-label="anchor" href="#determine-embodied-emissions"></a></h3>
 <div id="upstream-scope-3-emissions" class="callout">
@@ -754,9 +739,10 @@ Scope 2 emissions estimates.</p>
 </div>
 <p>Calculating the embodied emissions can be more difficult than the
 operational emissions from energy consumption as it can be more
-difficult to get information on embodied emissions from hardware. You
-may, of course, be lucky and the HPC system you are using could already
-provide estimates of the embodied emissions which you can use.</p>
+difficult to get information on embodied emissions associated with HPC
+hardware. You may, of course, be lucky and the HPC system you are using
+could already provide estimates of the embodied emissions which you can
+use!</p>
 <p>If you need to estimate this yourself, the major contributors to
 embodied emissions are likely to be:</p>
 <ul><li>Compute nodes</li>
@@ -845,7 +831,34 @@ than the embodied emissions from the HPC system hardware itself.</p>
 </div>
 </div>
 </div>
-<!-- TODO: Add exercise on computing embodied emissions for a different (GPU-based) system -->
+<div id="exercise-carbon-emissions-from-hpc-systems" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-carbon-emissions-from-hpc-systems" class="callout-inner">
+<h3 class="callout-title">Exercise: Carbon emissions from HPC systems</h3>
+<div class="callout-content">
+<p>One estimate of the power draw of ARCHER2 is 2.6 MW. Mean carbon
+intensities from different UK regions in 2024 give low emissions regions
+as 26 gCO<sub>2</sub>e/kWh, medium emissions regions as 140
+gCO<sub>2</sub>e/kWh and high emissions regions as 280
+gCO<sub>2</sub>e/kWh. What would the carbon emissions be from 1 year of
+ARCHER2 operations in the three different emissions regimes?</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div class="accordion-body">
+<p>TBC</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="compute-your-total-hpc-emissions">4. Compute your total HPC emissions<a class="anchor" aria-label="anchor" href="#compute-your-total-hpc-emissions"></a></h3>
@@ -877,7 +890,41 @@ at the job time.</p>
 </div>
 </div>
 </div>
-<!-- TODO: Add exercise to compute total emissions from HPC system use -->
+<div id="exercise-computing-total-emissions-from-hpc-system-use" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-computing-total-emissions-from-hpc-system-use" class="callout-inner">
+<h3 class="callout-title">Exercise: Computing total emissions from HPC system use</h3>
+<div class="callout-content">
+<p>You are using (or running) a GPU-based HPC service and a particular
+project has used the following amounts of resource over 3 months</p>
+<ul><li>1,100 GPUh</li>
+<li>3,542,000 kWh</li>
+</ul><p>The total embodied emissions for the service are 6,500,000 kgCO2e,
+the service lifetime is 7 years and there are 1000 compute nodes each
+with 8 GPU. The service is hosted in a location with a carbon intensity
+of 40 gCO<sub>2</sub>e/kWh.</p>
+<ol style="list-style-type: decimal"><li>Compute the scope 2 emissions for the project use</li>
+<li>Compute the scope 3 emissions rate in kgCO2e/GPUh</li>
+<li>Compute the scope 3 emissions for the project use</li>
+<li>Do scope 2 or scope 3 emissions dominate or are they evenly
+matched?</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution3" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
+  <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
+</button>
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div class="accordion-body">
+<p>TBC</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </section><section><h2 class="section-heading" id="hpc-carbon-intensity-hpc-ci-specification">HPC Carbon Intensity (HPC-CI) specification<a class="anchor" aria-label="anchor" href="#hpc-carbon-intensity-hpc-ci-specification"></a></h2>
 <hr class="half-width"><div id="software-carbon-intensity-sci" class="callout">
@@ -980,7 +1027,34 @@ above, we would take the total emissions from our HPC system use - let
 us say this came out to be 1500 kgCO<sub>2</sub>e - and the total number
 of functional units - say 950 ns simulated - and combine them:</p>
 <pre><code>HPC-CI  = 1500 kgCO2e / 950 ns = 1.58 kgCO2e/ns</code></pre>
-<!-- TODO: Add exercise on calculating HPC-CI -->
+<div id="exercise-hpc-ci-rate" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="exercise-hpc-ci-rate" class="callout-inner">
+<h3 class="callout-title">Exercise: HPC-CI rate</h3>
+<div class="callout-content">
+<p>In the previous exercise we computed the total HPC system emissions
+for 3 months of project use to be YYYY kgCO2/e. The project was
+modelling the climate and managed to simulate 3,680 years of Earth’s
+climate during that 3 month period using 1,100 GPUh of resource.</p>
+<ol style="list-style-type: decimal"><li>What is the HPC-CI in kgCO2e per simulated year?</li>
+<li>What is the HPC-CI in kgCO2e per GPUh?</li>
+</ol></div>
+</div>
+</div>
+<div id="accordionSolution4" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
+  <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
+</button>
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div class="accordion-body">
+<p>TBC</p>
+</div>
+</div>
+</div>
+</div>
 <div id="estimating-emissions-associated-with-future-use-of-hpc-systems" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1084,7 +1158,7 @@ emissions.</li>
   "url": "https://EPCCed.github.io/green-software-archer2/instructor/measurement.html",
   "identifier": "https://EPCCed.github.io/green-software-archer2/instructor/measurement.html",
   "dateCreated": "2025-03-19",
-  "dateModified": "2025-03-14",
+  "dateModified": "2025-03-19",
   "datePublished": "2025-03-19"
 }
 
