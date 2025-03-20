@@ -2241,7 +2241,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity used: these would be classified as Scope
@@ -2722,7 +2722,7 @@ ARCHER2 operations in the three different emissions regimes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -2795,7 +2795,7 @@ matched?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -2937,7 +2937,7 @@ climate during that 3 month period using 1,100 GPUh of resource.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -2996,7 +2996,7 @@ emissions.</li>
 <p>Last updated on 2025-03-20 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/reducing-emissions.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
 <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
         </div>
@@ -3080,9 +3080,16 @@ mechanisms such as offsets, compensations or neutralisations.</p>
 <h3 class="callout-title">Exercise: Strategies for abatement</h3>
 <div class="callout-content">
 <p>Abatement is the critical component of carbon emissions reduction
-strategies. While there are different ways in which an HPC service as a
-whole may implement abatement, can you think of actions that individual
-users could take to implement abatement in their use of HPC systems?</p>
+strategies. Pick one of the questions below (the one that is most
+relevant for your role) and write down some answers:</p>
+<ul>
+<li>Can you think of actions that individual users/researchers could
+take to implement abatement in their use of HPC systems?</li>
+<li>Can you think of actions that a service operator could take to
+implement abatement in the operation of HPC systems?</li>
+<li>Can you think of actions that a organisation procuring HPC systems
+could take to implement abatement when buying HPC systems?</li>
+</ul>
 </div>
 </div>
 </div>
@@ -3094,7 +3101,33 @@ users could take to implement abatement in their use of HPC systems?</p>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
-<li>TBC</li>
+<li>Individual users:
+<ul>
+<li>Run fewer jobs!</li>
+<li>Reduce wasted resources by having less job failures</li>
+<li>Run on systems that minimise emissions (spatial shifting)</li>
+<li>Run when emissions from electricity are lower (temporal
+shifting)</li>
+</ul>
+</li>
+<li>Service operators:
+<ul>
+<li>Build scheduler policies to eliminate emissions</li>
+<li>Provide tools and information that allow users to quantify their
+emissions and measure reductions</li>
+<li>Provide training on carbon emissions and abatement strategies</li>
+</ul>
+</li>
+<li>Service procurement:
+<ul>
+<li>Purchase the minimum amount of hardware possible for the
+service</li>
+<li>Build scoring on amount of embodied and operational emissions into
+procurement process</li>
+<li>Site HPC systems at locations that have low carbon intensities</li>
+<li>Run services for as long as possible</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -3410,7 +3443,7 @@ when the carbon intensity of electricity is lower, and the supply of
 renewable energy is higher.</p>
 <figure><img src=".././fig/31_carbon_awareness.png" title="Temporal shifting along with matching strategy" alt="Temporal shifting along with matching strategy" class="figure mx-auto d-block"><div class="figcaption">Temporal shifting along with matching
 strategy</div>
-</figure><!-- How does this work with the 100% renewable energy that ARCHER2 has purchased? What is the granularity? -->
+</figure>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="how-can-the-hpc-ci-rate-be-reduced">How can the HPC-CI rate be reduced?<a class="anchor" aria-label="anchor" href="#how-can-the-hpc-ci-rate-be-reduced"></a>
@@ -3471,7 +3504,7 @@ jobs/calculations. For example, optimise the sampling choices when
 exploring parameter spaces.</li>
 </ul>
 <p>Other strategies for improving the HPC-CI metric and, so, reducing
-emissions do depend on whether the dominant component is operational
+emissions depend on whether the dominant component is operational
 emissions (i.e. emissions from energy use) or the embodied emissions. If
 the components are evenly balanced then you should look at options from
 both sections.</p>

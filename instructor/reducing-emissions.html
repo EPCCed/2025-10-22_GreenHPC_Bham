@@ -118,11 +118,11 @@
   Green software use on HPC
 </div>
 
-<aside class="col-md-12 lesson-progress"><div style="width: 91%" class="percentage">
-    91%
+<aside class="col-md-12 lesson-progress"><div style="width: 85%" class="percentage">
+    85%
   </div>
   <div class="progress incubator">
-    <div class="progress-bar incubator" role="progressbar" style="width: 91%" aria-valuenow="91" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="progress-bar incubator" role="progressbar" style="width: 85%" aria-valuenow="85" aria-label="Lesson Progress" aria-valuemin="0" aria-valuemax="100">
     </div>
   </div>
 </aside><div class="container">
@@ -344,7 +344,7 @@
 
 
 
-        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 20 minutes</p>
+        <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 35 minutes</p>
 
         <div class="text-end">
           <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
@@ -423,10 +423,15 @@ mechanisms such as offsets, compensations or neutralisations.</p>
 <h3 class="callout-title">Exercise: Strategies for abatement</h3>
 <div class="callout-content">
 <p>Abatement is the critical component of carbon emissions reduction
-strategies. While there are different ways in which an HPC service as a
-whole may implement abatement, can you think of actions that individual
-users could take to implement abatement in their use of HPC systems?</p>
-</div>
+strategies. Pick one of the questions below (the one that is most
+relevant for your role) and write down some answers:</p>
+<ul><li>Can you think of actions that individual users/researchers could
+take to implement abatement in their use of HPC systems?</li>
+<li>Can you think of actions that a service operator could take to
+implement abatement in the operation of HPC systems?</li>
+<li>Can you think of actions that a organisation procuring HPC systems
+could take to implement abatement when buying HPC systems?</li>
+</ul></div>
 </div>
 </div>
 <div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
@@ -436,7 +441,27 @@ users could take to implement abatement in their use of HPC systems?</p>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
-<ul><li>TBC</li>
+<ul><li>Individual users:
+<ul><li>Run fewer jobs!</li>
+<li>Reduce wasted resources by having less job failures</li>
+<li>Run on systems that minimise emissions (spatial shifting)</li>
+<li>Run when emissions from electricity are lower (temporal
+shifting)</li>
+</ul></li>
+<li>Service operators:
+<ul><li>Build scheduler policies to eliminate emissions</li>
+<li>Provide tools and information that allow users to quantify their
+emissions and measure reductions</li>
+<li>Provide training on carbon emissions and abatement strategies</li>
+</ul></li>
+<li>Service procurement:
+<ul><li>Purchase the minimum amount of hardware possible for the
+service</li>
+<li>Build scoring on amount of embodied and operational emissions into
+procurement process</li>
+<li>Site HPC systems at locations that have low carbon intensities</li>
+<li>Run services for as long as possible</li>
+</ul></li>
 </ul></div>
 </div>
 </div>
@@ -729,7 +754,7 @@ when the carbon intensity of electricity is lower, and the supply of
 renewable energy is higher.</p>
 <figure><img src=".././fig/31_carbon_awareness.png" title="Temporal shifting along with matching strategy" alt="Temporal shifting along with matching strategy" class="figure mx-auto d-block"><div class="figcaption">Temporal shifting along with matching
 strategy</div>
-</figure><!-- How does this work with the 100% renewable energy that ARCHER2 has purchased? What is the granularity? --></div>
+</figure></div>
 </div>
 </section><section><h2 class="section-heading" id="how-can-the-hpc-ci-rate-be-reduced">How can the HPC-CI rate be reduced?<a class="anchor" aria-label="anchor" href="#how-can-the-hpc-ci-rate-be-reduced"></a></h2>
 <hr class="half-width"><p>We have mentioned above how the HPC-CI metric is designed to drive
@@ -784,7 +809,7 @@ emissions.</li>
 jobs/calculations. For example, optimise the sampling choices when
 exploring parameter spaces.</li>
 </ul><p>Other strategies for improving the HPC-CI metric and, so, reducing
-emissions do depend on whether the dominant component is operational
+emissions depend on whether the dominant component is operational
 emissions (i.e. emissions from energy use) or the embodied emissions. If
 the components are evenly balanced then you should look at options from
 both sections.</p>
