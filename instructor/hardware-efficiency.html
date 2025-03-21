@@ -346,7 +346,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Hardware Efficiency</h1>
-        <p>Last updated on 2025-03-19 |
+        <p>Last updated on 2025-03-21 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/hardware-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -378,7 +378,7 @@ HPC systems?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Understand what is meant by “embodied carbon” in the contect of HPC
+<ul><li>Understand what is meant by “embodied carbon” in the context of HPC
 systems</li>
 <li>Learn how embodied carbon efficiency can be improved by extending
 the lifespan of HPC systems and improving performance of applications on
@@ -393,22 +393,25 @@ maximising carbon efficiency</li>
 </div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
 <hr class="half-width"><p>The hardware used that makes up the HPC systems you are using is an
-important element to consider when looking to be greener users of
-HPC.</p>
+important element to consider when looking to be greener users of HPC.
+Indeed, for HPC systems located where carbon intensity of electricity
+generation is low, it may be the dominant component of emissions
+associated with HPC system use.</p>
 <p>You will see how embodied carbon is a hidden cost when it comes to
 hardware and the different measures you can take to reduce the impact
 that the creation, destruction and running of this hardware involves.
-For example, extending its lifetime or switching to cloud servers.</p>
+For example, extending its lifetime and improving the efficiency of your
+hardware use.</p>
 </section><section><h2 class="section-heading" id="key-concepts">Key concepts<a class="anchor" aria-label="anchor" href="#key-concepts"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="embodied-carbon">Embodied carbon<a class="anchor" aria-label="anchor" href="#embodied-carbon"></a></h3>
-<p>The device you are using to read this on produced carbon when it was
-manufactured and, once it reaches the end of life, disposing of it may
-release more. Embodied carbon (also referred to as “embedded carbon”) is
-the amount of carbon pollution emitted during the creation and disposal
-of a device.</p>
-<p>When calculating the total carbon pollution for HPC services, both
-the carbon pollution associated with running the system as well as the
+<p>The device you are using to participate in this workshop produced
+carbon when it was manufactured and, once it reaches the end of life,
+disposing of it may release more. Embodied carbon (also referred to as
+“embedded carbon”) is the amount of carbon emissions from the creation
+and disposal of a device.</p>
+<p>When calculating the total carbon emissions for HPC services, both
+the carbon emissions associated with running the system as well as the
 embodied carbon of the system must be accounted for.</p>
 <figure><img src=".././fig/17_embodioed_carbon.png" title="Bar chart illustrating embodied carbon from various end-user devices" alt="Bar chart illustrating embodied carbon from various end-user devices" class="figure mx-auto d-block"><div class="figcaption">Bar chart illustrating embodied carbon from
 various end-user devices</div>
@@ -430,7 +433,13 @@ the expected life span of a device. For example, suppose it took
 four years. Amortisation means that we can say the HPC system emits
 1000 kgCO2<sub>e</sub>/year.</p>
 <figure><img src=".././fig/18_amortization.png" title="Diagram illustrating amortisation" alt="Diagram illustrating amortisation" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating amortisation</div>
-</figure></div>
+</figure><p>Rather than years, we typically amortise the embodied emissions over
+the total amount of resource available on the HPC system over its
+lifetime. For example, if the resource use of an HPC system is measured
+in GPUh then we would amortise the embodied emissions over the total
+GPUh available on the service over its whole lifetime (to give an
+emissions rate in kgCO<sub>2</sub>e/GPUh).</p>
+</div>
 </section><section><h2 class="section-heading" id="how-to-improve-hardware-efficiency">How to improve hardware efficiency<a class="anchor" aria-label="anchor" href="#how-to-improve-hardware-efficiency"></a></h2>
 <hr class="half-width"><p>If we take into account the embodied carbon, it is clear that by the
 time we come to install an HPC system, it’s already emitted a good deal
@@ -442,12 +451,12 @@ hardware efficient.</p>
 <p>There are two main approaches to hardware efficiency:</p>
 <ul><li>
 <strong>Extending the lifespan</strong> of the hardware - which
-reduces the carbon emission rate per unit of time due to
+reduces the carbon emission rate per unit of resource due to
 amortisation.</li>
 <li>
 <strong>Increasing the utilisation and performance</strong> of the
 hardware - getting more useful work out of the hardware per unit of
-time.</li>
+resource.</li>
 </ul><div class="section level3">
 <h3 id="extending-the-lifespan-of-hardware">Extending the lifespan of hardware<a class="anchor" aria-label="anchor" href="#extending-the-lifespan-of-hardware"></a></h3>
 <p>In the example we saw previously, if we can add just one more year to
@@ -486,8 +495,8 @@ manner.</p>
 <div class="section level3">
 <h3 id="increasing-utilisation-and-performance">Increasing utilisation and performance<a class="anchor" aria-label="anchor" href="#increasing-utilisation-and-performance"></a></h3>
 <p>As well as increasing the lifespan to improve the embodied carbon
-efficiency, we can also get more out of the HPC hardware while we have
-it.</p>
+efficiency, we can also work to make sure we get the most out of the HPC
+hardware while we have it.</p>
 <p>At a service/system level this often corresponds to maximising the
 usage of the service - it’s better to have 100% utilisation than 20%
 utilisation because of the cost of embodied carbon (and also because of
@@ -598,7 +607,7 @@ decide how to maximise your carbon efficiency.</li>
   "url": "https://carpentries-incubator.github.io/green-software-hpc/instructor/hardware-efficiency.html",
   "identifier": "https://carpentries-incubator.github.io/green-software-hpc/instructor/hardware-efficiency.html",
   "dateCreated": "2025-03-21",
-  "dateModified": "2025-03-19",
+  "dateModified": "2025-03-21",
   "datePublished": "2025-03-21"
 }
 

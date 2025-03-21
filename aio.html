@@ -562,7 +562,7 @@ smallest?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may have come up with activities from the following list:</p>
 <ul>
@@ -837,7 +837,7 @@ from.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>You may have come up with sources such as:</p>
 <ul>
@@ -874,7 +874,7 @@ so it could be included in a carbon audit of your work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You may have come up with outcomes such as:</p>
 <ul>
@@ -1837,7 +1837,7 @@ emissions regimes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>First we need to estimate the amount of energy consumed by ARCHER2 in
 kWh for 1 year from the power draw estimate, this is given by:</p>
@@ -2110,7 +2110,7 @@ shaping and/or temporal shifting on an HPC system?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Scheduling based on power intensity
@@ -2174,7 +2174,7 @@ intensity and less in periods of high intensity.</li>
 </div>
 </section></section><section id="aio-hardware-efficiency"><p>Content from <a href="hardware-efficiency.html">Hardware Efficiency</a></p>
 <hr>
-<p>Last updated on 2025-03-19 |
+<p>Last updated on 2025-03-21 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/hardware-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2201,7 +2201,7 @@ HPC systems?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul>
-<li>Understand what is meant by “embodied carbon” in the contect of HPC
+<li>Understand what is meant by “embodied carbon” in the context of HPC
 systems</li>
 <li>Learn how embodied carbon efficiency can be improved by extending
 the lifespan of HPC systems and improving performance of applications on
@@ -2219,25 +2219,28 @@ maximising carbon efficiency</li>
 </h2>
 <hr class="half-width">
 <p>The hardware used that makes up the HPC systems you are using is an
-important element to consider when looking to be greener users of
-HPC.</p>
+important element to consider when looking to be greener users of HPC.
+Indeed, for HPC systems located where carbon intensity of electricity
+generation is low, it may be the dominant component of emissions
+associated with HPC system use.</p>
 <p>You will see how embodied carbon is a hidden cost when it comes to
 hardware and the different measures you can take to reduce the impact
 that the creation, destruction and running of this hardware involves.
-For example, extending its lifetime or switching to cloud servers.</p>
+For example, extending its lifetime and improving the efficiency of your
+hardware use.</p>
 </section><section><h2 class="section-heading" id="key-concepts">Key concepts<a class="anchor" aria-label="anchor" href="#key-concepts"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
 <h3 id="embodied-carbon">Embodied carbon<a class="anchor" aria-label="anchor" href="#embodied-carbon"></a>
 </h3>
-<p>The device you are using to read this on produced carbon when it was
-manufactured and, once it reaches the end of life, disposing of it may
-release more. Embodied carbon (also referred to as “embedded carbon”) is
-the amount of carbon pollution emitted during the creation and disposal
-of a device.</p>
-<p>When calculating the total carbon pollution for HPC services, both
-the carbon pollution associated with running the system as well as the
+<p>The device you are using to participate in this workshop produced
+carbon when it was manufactured and, once it reaches the end of life,
+disposing of it may release more. Embodied carbon (also referred to as
+“embedded carbon”) is the amount of carbon emissions from the creation
+and disposal of a device.</p>
+<p>When calculating the total carbon emissions for HPC services, both
+the carbon emissions associated with running the system as well as the
 embodied carbon of the system must be accounted for.</p>
 <figure><img src="./fig/17_embodioed_carbon.png" title="Bar chart illustrating embodied carbon from various end-user devices" alt="Bar chart illustrating embodied carbon from various end-user devices" class="figure mx-auto d-block"><div class="figcaption">Bar chart illustrating embodied carbon from
 various end-user devices</div>
@@ -2260,7 +2263,12 @@ the expected life span of a device. For example, suppose it took
 four years. Amortisation means that we can say the HPC system emits
 1000 kgCO2<sub>e</sub>/year.</p>
 <figure><img src="./fig/18_amortization.png" title="Diagram illustrating amortisation" alt="Diagram illustrating amortisation" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating amortisation</div>
-</figure>
+</figure><p>Rather than years, we typically amortise the embodied emissions over
+the total amount of resource available on the HPC system over its
+lifetime. For example, if the resource use of an HPC system is measured
+in GPUh then we would amortise the embodied emissions over the total
+GPUh available on the service over its whole lifetime (to give an
+emissions rate in kgCO<sub>2</sub>e/GPUh).</p>
 </div>
 </section><section><h2 class="section-heading" id="how-to-improve-hardware-efficiency">How to improve hardware efficiency<a class="anchor" aria-label="anchor" href="#how-to-improve-hardware-efficiency"></a>
 </h2>
@@ -2276,12 +2284,12 @@ hardware efficient.</p>
 <ul>
 <li>
 <strong>Extending the lifespan</strong> of the hardware - which
-reduces the carbon emission rate per unit of time due to
+reduces the carbon emission rate per unit of resource due to
 amortisation.</li>
 <li>
 <strong>Increasing the utilisation and performance</strong> of the
 hardware - getting more useful work out of the hardware per unit of
-time.</li>
+resource.</li>
 </ul>
 <div class="section level3">
 <h3 id="extending-the-lifespan-of-hardware">Extending the lifespan of hardware<a class="anchor" aria-label="anchor" href="#extending-the-lifespan-of-hardware"></a>
@@ -2323,8 +2331,8 @@ manner.</p>
 <h3 id="increasing-utilisation-and-performance">Increasing utilisation and performance<a class="anchor" aria-label="anchor" href="#increasing-utilisation-and-performance"></a>
 </h3>
 <p>As well as increasing the lifespan to improve the embodied carbon
-efficiency, we can also get more out of the HPC hardware while we have
-it.</p>
+efficiency, we can also work to make sure we get the most out of the HPC
+hardware while we have it.</p>
 <p>At a service/system level this often corresponds to maximising the
 usage of the service - it’s better to have 100% utilisation than 20%
 utilisation because of the cost of embodied carbon (and also because of
@@ -2515,7 +2523,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity used: these would be classified as Scope
@@ -2996,7 +3004,7 @@ ARCHER2 operations in the three different emissions regimes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -3069,7 +3077,7 @@ matched?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -3211,7 +3219,7 @@ climate during that 3 month period using 1,100 GPUh of resource.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -3371,7 +3379,7 @@ could take to implement abatement when buying HPC systems?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li>Individual users:
