@@ -843,7 +843,7 @@ from.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may have come up with sources such as:</p>
 <ul>
@@ -880,7 +880,7 @@ so it could be included in a carbon audit of your work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You may have come up with outcomes such as:</p>
 <ul>
@@ -982,7 +982,7 @@ the least amount of carbon possible per unit of work</strong>.</li>
 </div>
 </section></section><section id="aio-energy-efficiency"><p>Content from <a href="energy-efficiency.html">Energy Efficiency</a></p>
 <hr>
-<p>Last updated on 2025-03-18 |
+<p>Last updated on 2025-03-21 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/energy-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 30 minutes</p>
@@ -1038,25 +1038,6 @@ mobile phones consumes electricity. One of the best ways to reduce
 electricity consumption and the subsequent carbon emissions made by
 software is to make make our use of HPC facilities more energy
 efficient.</p>
-<div id="do-renewable-energy-sources-have-zero-carbon-emissions" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<div id="do-renewable-energy-sources-have-zero-carbon-emissions" class="callout-inner">
-<h3 class="callout-title">Do renewable energy sources have zero carbon emissions?</h3>
-<div class="callout-content">
-<p>The use of low-carbon sources of electricity such as wind or
-hydroelectric also reduce the emissions from the electricity we consume
-by our use of HPC. However, even renewable electricity sources have a
-carbon cost from the manufacture, operation and decommissioning of the
-energy source (e.g. wind farm) so there are always reductions in
-emissions to be gained from reducing energy use. We will talk about how
-you estimate the impact of different emissions sources, including
-electricity use, later in this workshop so you can prioritise your
-effort where it will have the most impact.</p>
-</div>
-</div>
-</div>
 <p>The reduction of energy consumed by work on an HPC system depends on
 a lot of things, including:</p>
 <ul>
@@ -1171,6 +1152,25 @@ e.g. nuclear.</li>
 <strong>Renewable energy</strong> - sources will not expire
 e.g. solar, wind</li>
 </ul>
+<div id="do-renewable-energy-sources-have-zero-carbon-emissions" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="do-renewable-energy-sources-have-zero-carbon-emissions" class="callout-inner">
+<h3 class="callout-title">Do renewable energy sources have zero carbon emissions?</h3>
+<div class="callout-content">
+<p>The use of low-carbon sources of electricity such as wind or
+hydroelectric also reduce the emissions from the electricity we consume
+by our use of HPC. However, even renewable electricity sources have a
+carbon cost from the manufacture, operation and decommissioning of the
+energy source (e.g. wind farm) so there are always reductions in
+emissions to be gained from reducing energy use. We will talk about how
+you estimate the impact of different emissions sources, including
+electricity use, later in this workshop so you can prioritise your
+effort where it will have the most impact.</p>
+</div>
+</div>
+</div>
 </div>
 <div class="section level3">
 <h3 id="energy-measurement">Energy measurement<a class="anchor" aria-label="anchor" href="#energy-measurement"></a>
@@ -1346,7 +1346,6 @@ you may also be able to change the algorithms, data layout and other
 aspects of the software to improve energy efficiency. Such approaches
 are beyond the scope of this workshop but benchmarking energy
 consumption also form a core component of this work.</p>
-<!-- TODO: add note on including energy efficiency metrics in procurment benchmarks -->
 <div id="exercise-energy-efficiency-on-hpc-systems" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1639,7 +1638,7 @@ ARCHER2 operations in the three different emissions regimes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -1898,7 +1897,7 @@ shaping on an HPC system?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Scheduling based on power intensity
