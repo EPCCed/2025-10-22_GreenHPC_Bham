@@ -837,7 +837,7 @@ from.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>You may have come up with sources such as:</p>
 <ul>
@@ -874,7 +874,7 @@ so it could be included in a carbon audit of your work?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You may have come up with outcomes such as:</p>
 <ul>
@@ -1482,12 +1482,124 @@ kWh
 <div class="accordion-body">
 <p>We can compute the energy efficiency in kWh/ns by dividing the energy
 used by the number of ns simulated:</p>
-<div class="line-block"> | | 2.0 GHz | | 2.25 GHz + boost | |<br>
-Node count | ns simulated | Runtime (s) | kWh/ns | Runtime (s) | kWh/ns
-|</div>
-<p>|—:|—:|—:|—:|—:|—:| | 1 | 0.020 | 369 | 2.32 | 288 | 2.32 | | 2 |
-0.020 | 198 | 2.25 | 156 | 2.32 | | 3 | 0.020 | 155 | 2.19 | 109 | 2.32
-| | 4 | 0.020 | 117 | 2.36 | 93 | 2.56 |</p>
+<table class="table">
+<tr>
+<th>
+</th>
+<th>
+</th>
+<th>
+2.0 GHz
+</th>
+<th>
+</th>
+<th>
+2.25 GHz + boost
+</th>
+<th>
+</th>
+</tr>
+<tr>
+<th>
+Node count
+</th>
+<th>
+ns simulated
+</th>
+<th>
+Runtime (s)
+</th>
+<th>
+kWh/ns
+</th>
+<th>
+Runtime (s)
+</th>
+<th>
+kWh/ns
+</th>
+</tr>
+<tr>
+<td>
+1
+</td>
+<td>
+0.020
+</td>
+<td>
+369
+</td>
+<td>
+2.32
+</td>
+<td>
+288
+</td>
+<td>
+2.32
+</td>
+</tr>
+<tr>
+<td>
+2
+</td>
+<td>
+0.020
+</td>
+<td>
+198
+</td>
+<td>
+2.25
+</td>
+<td>
+156
+</td>
+<td>
+2.32
+</td>
+</tr>
+<tr>
+<td>
+3
+</td>
+<td>
+0.020
+</td>
+<td>
+155
+</td>
+<td>
+2.19
+</td>
+<td>
+109
+</td>
+<td>
+2.32
+</td>
+</tr>
+<tr>
+<td>
+4
+</td>
+<td>
+0.020
+</td>
+<td>
+117
+</td>
+<td>
+2.36
+</td>
+<td>
+93
+</td>
+<td>
+2.56
+</td>
+</tr>
+</table>
 <p>So, the most energy efficient combination is 3 nodes at 2 GHz CPU
 clock frequency and the worst is 4 nodes with 2.25 GHz + boost CPU clock
 frequency. The worst case is around 17% less energy efficient than the
@@ -2402,7 +2514,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity used: these would be classified as Scope
@@ -2883,7 +2995,7 @@ ARCHER2 operations in the three different emissions regimes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -2956,7 +3068,7 @@ matched?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
@@ -3098,7 +3210,7 @@ climate during that 3 month period using 1,100 GPUh of resource.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>TBC</p>
 </div>
