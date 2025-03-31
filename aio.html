@@ -1838,7 +1838,7 @@ emissions regimes?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>First we need to estimate the amount of energy consumed by ARCHER2 in
 kWh for 1 year from the power draw estimate, this is given by:</p>
@@ -2111,7 +2111,7 @@ shaping and/or temporal shifting on an HPC system?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ul>
 <li>Scheduling based on power intensity
@@ -2387,7 +2387,7 @@ carbon efficiency from HPC system use.</li>
 </div>
 </section></section><section id="aio-measurement"><p>Content from <a href="measurement.html">Measurement</a></p>
 <hr>
-<p>Last updated on 2025-03-21 |
+<p>Last updated on 2025-03-31 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2479,18 +2479,18 @@ when using your product or waste output from the product</li>
 </ul>
 </li>
 </ul>
-<p>Scope 3, sometimes referred to as value chain emissions, is the most
-significant source of emissions and the most complex to calculate for
-many organisations. These encompass the full range of activities needed
-to create a product or service, from conception to distribution. In the
-case of a laptop, for example, every raw material used in its production
-emits carbon when being extracted and processed (part of the upstream
-scope 3 emissions). Value chain emissions also include emissions from
-the use of the laptop, meaning the emissions from the energy used to
-power the laptop after it has been sold to a customer (part of
-downstream scope 3 emissions).</p>
+<p>Scope 3, sometimes referred to as value chain emissions, is often the
+most significant source of emissions and the most complex to calculate
+for many organisations. These encompass the full range of activities
+needed to create a product or service, from conception to distribution.
+In the case of a laptop, for example, every raw material used in its
+production emits carbon when being extracted and processed (part of the
+upstream scope 3 emissions). Value chain emissions also include
+emissions from the use of the laptop, meaning the emissions from the
+energy used to power the laptop after it has been sold to a customer
+(part of downstream scope 3 emissions).</p>
 <p>Through this approach, it’s possible to sum up all the GHG emissions
-from every organization and person in the world and reach a global
+from every organisation and person in the world and reach a global
 total.</p>
 <div class="section level3">
 <h3 id="what-scope-does-my-application-fall-into">What scope does my application fall into?<a class="anchor" aria-label="anchor" href="#what-scope-does-my-application-fall-into"></a>
@@ -2505,7 +2505,7 @@ this?</p>
 <div id="exercise-what-scope-for-hpc-emissions" class="callout-inner">
 <h3 class="callout-title">Exercise: What scope for HPC emissions?</h3>
 <div class="callout-content">
-<p>Throughout this course we have spoken about emissions from two
+<p>Throughout this lesson we have spoken about emissions from two
 different sources associated with our use of HPC: emissions from the
 electricity used to run our models/simulations on HPC systems and
 embodied emissions from the HPC system hardware. Given the definitions
@@ -2519,7 +2519,7 @@ different sources of HPC system use emissions fall into?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Emissions from electricity used: these would be classified as Scope
@@ -2544,11 +2544,9 @@ emissions and for what purpose. From the viewpoint of the hardware
 vendor who sells and manufactures the HPC system, the electricity use
 falls into Downstream Scope 3 emissions but for operators and users of
 the HPC system they would classified as Scope 2 emissions. As we are
-approaching this subject as users of HPC systems we will always classify
-the emissions from our electricity use on HPC systems as Scope 2.</p>
-<p>In short, Downstream Scope 3 emissions are not usually relevant for
-use of HPC systems as this part of the emissions is reported in the
-Scope 2 emissions.</p>
+approaching this subject as buyers, operators and users of HPC systems
+we will always classify the emissions from our electricity use on HPC
+systems as Scope 2.</p>
 </div>
 </div>
 </div>
@@ -2566,7 +2564,7 @@ formula for calculating your emissions from use of HPC systems
 <li>
 <code>E</code> = Energy consumed by HPC use (in kWh)</li>
 <li>
-<code>I</code> = Location-based marginal carbon intensity (in
+<code>I</code> = Location-based carbon intensity (in
 kgCO<sub>2</sub>/kWh)</li>
 <li>
 <code>M</code> = Embodied emissions</li>
@@ -2581,7 +2579,7 @@ HPC use - even for a full lifetime of an HPC service.</p>
 <h3 class="callout-title">Include failed jobs and jobs that did not produce useful output</h3>
 <div class="callout-content">
 <p>While it can be tempting to only include the use of HPC that produced
-useful output in our emissions calculations this should be avoided. The
+useful output in our emissions calculations, this should be avoided. The
 true amount of emissions includes <strong>all</strong> of our HPC system
 use to get us to the results we use and so failed jobs (due to errors)
 or calculations that did not produce useful output must be included. On
@@ -2592,11 +2590,11 @@ from these types of non-productive jobs.</p>
 </div>
 </div>
 <p>Instead of bucketing the carbon emissions of HPC use into scopes 1-3,
-it buckets them into <strong>operational emissions</strong> (carbon
-emissions from the electricity required for your HPC use, represented by
-<code>E * I</code>) and <strong>embodied emissions</strong> (carbon
-emissions from the physical HPC system components, represented by
-<code>M</code>).</p>
+this calculation buckets them into <strong>operational
+emissions</strong> (carbon emissions from the electricity required for
+your HPC use, represented by <code>E * I</code>) and <strong>embodied
+emissions</strong> (carbon emissions from the physical HPC system
+components, represented by <code>M</code>).</p>
 <p>Follow these steps to calculate your HPC emissions.</p>
 <ol style="list-style-type: decimal">
 <li>Gather your energy use - this can be measured or estimated and is
@@ -2622,7 +2620,7 @@ include them in your calculation.</p>
 <p>If you are really lucky, the HPC system staff will have done this
 calculation for you. As has been done for the UK National Supercomputing
 Service, ARCHER2: <a href="https://docs.archer2.ac.uk/user-guide/energy/#scope-2-emissions" class="external-link">Estimating
-emissions from ARCHER2</a></p>
+emissions from ARCHER2</a>.</p>
 <p>We will cover two different ways to estimate the power draw of HPC
 systems which can then be used to compute energy use.</p>
 <ol style="list-style-type: lower-alpha">
@@ -2653,7 +2651,7 @@ components to get a mean power draw per component that can be used to
 estimate energy use. For example, if the total power draw of the system
 is 250 kW and it contains 512 GPU, then the mean power draw per GPU is
 <code>250 kW / 512 GPU = 0.488 kW/GPU</code>. This, in turn, means the
-energy used for 12 hours use of 2 GPU is
+energy used for 12 hours use of 2 GPU is estimated by
 <code>12 hours * 2 GPU * 0.488 kW/GPU = 11.7 kWh</code>.</p>
 <p>You should use the component that you measure resource use in to
 compute the mean power draw. For example. if your usage is measured in
@@ -2764,17 +2762,19 @@ ARCHER2.</p>
 <p>As well as the energy used by the system itself, there is also the
 energy used by the plant that supplies power and cooling to the HPC
 system. Different data centres have different sizes of overheads and
-this is given by PUE (Power Use Efficiency). For example, a PUE of 1.25
-indicates that an additional 25% energy use is added on top of the
-system energy use to account for the plant.</p>
+this is given by PUE (Power Use Efficiency) which we met earlier in this
+lesson. For example, a PUE of 1.25 indicates that an additional 25%
+energy use is added on top of the system energy use to account for the
+plant.</p>
 <p>The PUE will vary with outside weather conditions at the data centre.
-For the ARCHER2 example, PUE is typically less than 10% so, s a
+For the ARCHER2 example, PUE is typically less than 10% so, as a
 conservative estimate, they add an additional 10% energy use to the
 total to account for plant overheads.</p>
 <p>So, for the ARCHER2 example, the process for computing your total
 energy use becomes:</p>
 <ul>
-<li>Measure total energy use from all jobs run</li>
+<li>Measure total compute node energy use from all jobs run via node
+counters</li>
 <li>Add 15% extra energy to cover energy use from other components</li>
 <li>Add another 10% energy use top of this new total to cover plant
 overheads</li>
@@ -2858,9 +2858,9 @@ Scope 2 emissions estimates.</p>
 <p>Calculating the embodied emissions can be more difficult than the
 operational emissions from energy consumption as it can be more
 difficult to get information on embodied emissions associated with HPC
-hardware. You may, of course, be lucky and the HPC system you are using
-could already provide estimates of the embodied emissions which you can
-use!</p>
+system hardware. You may, of course, be lucky and the HPC system you are
+using could already provide estimates of the embodied emissions which
+you can use!</p>
 <p>If you need to estimate this yourself, the major contributors to
 embodied emissions are likely to be:</p>
 <ul>
@@ -2875,8 +2875,8 @@ which components there are lots of and use that as the starting place.
 Complex components (such as nodes, storage and switches) are likely to
 have much higher embodied emissions than simpler components (pumps,
 fans, cables etc.).</p>
-<p>As an example, here is how we have estimated embodied emissions for
-ARCHER2:</p>
+<p>As an example, here is how the embodied emissions for ARCHER2 have
+been estimated:</p>
 <table style="width:100%;" class="table">
 <colgroup>
 <col width="16%">
@@ -2949,7 +2949,7 @@ ARCHER2:</p>
 <ol style="list-style-type: decimal">
 <li><a href="https://doi.org/10.5281/zenodo.7692451" class="external-link">IRISCAST Final
 Report</a></li>
-<li>Estimate taken from IBM z16™ multi frame 24-port Ethernet Switch
+<li>Estimate taken from IBM z16(TM) multi frame 24-port Ethernet Switch
 Product Carbon Footprint</li>
 <li><a href="https://arxiv.org/abs/2207.10793" class="external-link">Tannu and Nair,
 2023</a></li>
@@ -2971,11 +2971,11 @@ to the compute nodes.</p>
 <div class="callout-content">
 <p>We have not included embodied emissions associated with the data
 centre buildings and plant in the analysis above. <a href="https://doi.org/10.5281/zenodo.7692450" class="external-link">The IRISCAST report</a>
-mentioned above provides an evaluation of these values. While the total
-embodied emissions can be high for these items, their long lifespan
-means that their contribution to the embodied emissions during the
-lifespan of a particular HPC system are generally much less significant
-than the embodied emissions from the HPC system hardware itself.</p>
+provides an evaluation of these values. While the total embodied
+emissions can be high for these items, their long lifespan means that
+their contribution to the embodied emissions during the lifespan of a
+particular HPC system are generally much less significant than the
+embodied emissions from the HPC system hardware itself.</p>
 </div>
 </div>
 </div>
@@ -3009,7 +3009,8 @@ emissions arising from our use of HPC.</p>
 <p>Rather than computing total energy use and then using an aggregate
 value for the carbon intensity, it may make more sense to compute
 <code>E * I</code> on a per-job basis using the carbon intensity value
-at the job time.</p>
+at the job time. This is the approach used in the tools available on
+ARCHER2 for estimating emissions.</p>
 </div>
 </div>
 </div>
@@ -3046,7 +3047,7 @@ matched?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>The scope 2 emissions from energy use by the project are given by
@@ -3099,12 +3100,13 @@ specification, HPC-CI) to calculate your emissions from HPC system use
 and to encourage action towards eliminating emissions.</p>
 <p>It is not a replacement for the GHG protocol, but an additional
 metric that helps you understand how your HPC system use can be measured
-in terms of carbon emissions so they can make more informed decisions.
-While the GHG protocol calculates the <strong>total emissions</strong>,
-the HPC-CI is about calculating the <strong>rate of emissions</strong>.
-In automotive terms, HPC-CI is more like a miles per gallon measurement
-and the GHG protocol is more like the total carbon footprint of a car
-manufacturer and all their cars they produce every year.</p>
+in terms of carbon emissions so you can make more informed decisions.
+While the GHG protocol and the HPC-E calculates the <strong>total
+emissions</strong>, the HPC-CI is about calculating the <strong>rate of
+emissions</strong>. In automotive terms, HPC-CI is more like a miles per
+gallon measurement and the GHG protocol/HPC-E is more like the total
+carbon footprint of a car manufacturer and all their cars they produce
+every year.</p>
 <p>An important thing to note is that it is not possible to reduce your
 HPC-CI rate by purchasing offsets in the form of neutralisations,
 compensations, or by offsetting electricity in the form of renewable
@@ -3115,17 +3117,18 @@ reduce the associated HPC-CI rate.</p>
 <p>Offsets are an essential component of any climate strategy; however,
 offsets are not eliminations and therefore are not included in the
 HPC-CI metric.</p>
-<p>If you make your HPC use more <strong>energy efficient, hardware
-efficient</strong>, or <strong>carbon aware</strong>, your HPC-CI rate
-will decrease. The only way to reduce your rate is to invest time or
-resources into one of those three principles. As such, adopting the
-HPC-CI metric for your HPC use, will drive investment into one of the
-three pillars of green HPC use.</p>
+<p>If you make your HPC use more <strong>energy efficient</strong>,
+<strong>hardware efficient</strong>, or <strong>carbon aware</strong>,
+your HPC-CI rate will decrease. The only way to reduce your rate is to
+invest time or resources into one of those three principles. As such,
+adopting the HPC-CI metric for your HPC use, will drive investment into
+one of the three pillars of green HPC use.</p>
 </section><section><h2 class="section-heading" id="the-hpc-ci-equation">The HPC-CI equation<a class="anchor" aria-label="anchor" href="#the-hpc-ci-equation"></a>
 </h2>
 <hr class="half-width">
 <p>The equation to calculate an HPC-CI rate is simple and very closely
-related to the calculation of total emissions presented above:</p>
+related to the calculation of total emissions (HPC-E) presented
+above:</p>
 <pre><code>HPC-CI = [(E * I) + M] per R</code></pre>
 <ul>
 <li>
@@ -3140,11 +3143,11 @@ kgCO2/kWh)</li>
 calculation cycles, research papers published, cost)</li>
 </ul>
 <p>This yields an emissions rate in carbon emissions per functional unit
-(<code>HPC-E per R</code>), e.g. kgCO2e/iteration.</p>
-<p>The steps to calculate your HPC-CI score are the similar as
-calculating your emissions described above with additional steps to
-produce the rate. Steps 1-4 are identical the methodology described
-above:</p>
+(<code>HPC-E per R</code>), e.g. kgCO<sub>2</sub>e/iteration.</p>
+<p>The steps to calculate your HPC-CI score are the same as calculating
+your total emissions (HPC-E) described above with additional steps to
+produce the rate. Steps 1-4 are identical to the HPC-E methodology
+described above:</p>
 <ol style="list-style-type: decimal">
 <li>Gather your energy use</li>
 <li>Determine the carbon intensity at the location of the HPC system you
@@ -3165,10 +3168,10 @@ and you are free to pick whichever best describes the output from your
 use of HPC systems. For example, this could be a metric from the
 software you use (ns simulated, number of years simulated, iterations)
 or a metric tied to research progress (number of compounds modelled,
-data points analysed). There may also be ideas in literature related to
-your research area of what a good choice may be. You may want to trial
-different functional units to see which one works best for your
-work.</p>
+data points analysed, papers published). There may also be ideas in
+literature related to your work area of what a good choice may be. You
+may want to trial different functional units to see which one works best
+for your work.</p>
 <p>As a concrete example, imagine that you are simulating the dynamics
 of a biomolecular system (using software such as GROMACS, Amber or NAMD)
 then you could well chose the number of ns simulated as your functional
@@ -3180,10 +3183,10 @@ more or less useful in different contexts.</p>
 <div class="section level3">
 <h3 id="calculate-hpc-ci-rate">6. Calculate HPC-CI rate<a class="anchor" aria-label="anchor" href="#calculate-hpc-ci-rate"></a>
 </h3>
-<p>Now you have both the total emisssions for your use of HPC systems
-and the number of functional units arising from the same use of HPC
-systems you can calculate the HPC-CI by dividing the total emissions by
-the total number of functional units.</p>
+<p>Now you have both the total emissions for your use of HPC systems and
+the number of functional units arising from the same use of HPC systems
+you can calculate the HPC-CI by dividing the total emissions by the
+total number of functional units.</p>
 <p>To continue our example of biomolecular simulation that we mentioned
 above, we would take the total emissions from our HPC system use - let
 us say this came out to be 1500 kgCO<sub>2</sub>e - and the total number
@@ -3212,7 +3215,7 @@ climate during that 3 month period using 1,100 GPUh of resource.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li><p>Given by:
@@ -3260,8 +3263,8 @@ organisations that supply others in a chain. In this way, one
 organisation’s scope 1 and 2 will sum up into another organization’s
 scope 3.</li>
 <li>You can use the GHG protocol to estimate your emissions from HPC
-system use but it requires access to good quality information from the
-HPC systems you are using.</li>
+system use but it requires access to reasonable quality information from
+the HPC systems you are using.</li>
 <li>The HPC-CI is a metric designed specifically to calculate emissions
 from HPC systems and is a rate rather than a total. This can be used to
 measure improvements in emissions efficiency and drive reductions in
@@ -3377,7 +3380,7 @@ could take to implement abatement when buying HPC systems?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li>Individual users:
