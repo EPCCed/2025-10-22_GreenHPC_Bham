@@ -22,6 +22,9 @@
     <loc>https://carpentries-incubator.github.io/green-software-hpc/advanced-containers.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/green-software-hpc/afternoon-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/aio.html</loc>
   </url>
   <url>
@@ -85,6 +88,9 @@
     <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/advanced-containers.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/afternoon-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/aio.html</loc>
   </url>
   <url>
@@ -136,6 +142,9 @@
     <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/key-points.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/lunch-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/managing-containers.html</loc>
   </url>
   <url>
@@ -143,6 +152,9 @@
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/meet-docker.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/morning-break.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/instructor/next-steps.html</loc>
@@ -172,6 +184,9 @@
     <loc>https://carpentries-incubator.github.io/green-software-hpc/key-points.html</loc>
   </url>
   <url>
+    <loc>https://carpentries-incubator.github.io/green-software-hpc/lunch-break.html</loc>
+  </url>
+  <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/managing-containers.html</loc>
   </url>
   <url>
@@ -179,6 +194,9 @@
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/meet-docker.html</loc>
+  </url>
+  <url>
+    <loc>https://carpentries-incubator.github.io/green-software-hpc/morning-break.html</loc>
   </url>
   <url>
     <loc>https://carpentries-incubator.github.io/green-software-hpc/next-steps.html</loc>
