@@ -28,7 +28,6 @@ After completing this lesson you should:
 - Gain practical advice on how you can measure and improve the carbon efficiency of your use of
   HPC
 
-
 :::::::::::::::::::::::::::::::::::::: callout
 
 This workshop is based on and builds on the material in the [Green Software Practitioner](https://learn.greensoftware.foundation/)
@@ -41,7 +40,7 @@ course developed by the [Green Software Foundation](https://greensoftware.founda
 
 ## Target audience
 
-This lesson is aimed at all stakeholders in HPC use (e.g. researchers, RSEs, funders). No knowledge of environmental sustainability principles is assumed. 
+Anyone involved in using or delivering HPC resources - a user, a developer of software for use on HPC, an HPC service operator or those involved in procuring HPC systems. By attending this course, you will be able to better understand the effect of HPC systems on carbon emissions, where it fits with emissions from other activities and what concrete actions that can be taken to reduce emissions and the size of the impact from these reductions. No knowledge of environmental sustainability principles is assumed. 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -50,7 +49,7 @@ This lesson is aimed at all stakeholders in HPC use (e.g. researchers, RSEs, fun
 
 ## Prerequisites
 
-There are no prerequisites for this lesson.
+Attendees should familiarise themselves with the key concepts below before attending the workshop.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
