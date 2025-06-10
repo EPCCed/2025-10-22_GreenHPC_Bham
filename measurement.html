@@ -348,7 +348,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Measurement</h1>
-        <p>Last updated on 2025-05-08 |
+        <p>Last updated on 2025-06-10 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/measurement.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -509,14 +509,14 @@ rate, as described below) are critical steps on the path to reducing and
 potentially eliminating emissions from your use of HPC systems. The
 formula for calculating your emissions from use of HPC systems
 (<code>HPC-E</code>) is straightforward:</p>
-<pre><code><span><span class="va">HPC</span><span class="op">-</span><span class="va">E</span> <span class="op">=</span> <span class="op">(</span><span class="va">E</span> <span class="op">*</span> <span class="va">I</span><span class="op">)</span> <span class="op">+</span> <span class="va">M</span></span></code></pre>
+<pre><code><span><span class="va">HPC</span><span class="op">-</span><span class="va">E</span> <span class="op">=</span> <span class="op">(</span><span class="va">E</span> <span class="op">*</span> <span class="va">CI</span><span class="op">)</span> <span class="op">+</span> <span class="va">M</span></span></code></pre>
 <ul><li>
 <code>E</code> = Energy consumed by HPC use (in kWh)</li>
 <li>
-<code>I</code> = Location-based carbon intensity (in
-kgCO<sub>2</sub>/kWh)</li>
+<code>CI</code> = Location-based carbon intensity (in
+kgCO<sub>2</sub>e/kWh)</li>
 <li>
-<code>M</code> = Embodied emissions</li>
+<code>M</code> = Embodied emissions (in kgCO<sub>2</sub>e)</li>
 </ul><p>You can calculate this on a per job basis or for a larger grouping of
 HPC use - even for a full lifetime of an HPC service.</p>
 <div id="include-failed-jobs-and-jobs-that-did-not-produce-useful-output" class="callout">
@@ -540,7 +540,7 @@ from these types of non-productive jobs.</p>
 <p>Instead of bucketing the carbon emissions of HPC use into scopes 1-3,
 this calculation buckets them into <strong>operational
 emissions</strong> (carbon emissions from the electricity required for
-your HPC use, represented by <code>E * I</code>) and <strong>embodied
+your HPC use, represented by <code>E * CI</code>) and <strong>embodied
 emissions</strong> (carbon emissions from the physical HPC system
 components, represented by <code>M</code>).</p>
 <p>Follow these steps to calculate your HPC emissions.</p>
@@ -844,27 +844,28 @@ embodied emissions from the HPC system hardware itself.</p>
 <p>Now we should have all the data we need to compute our total
 emissions from HPC system use:</p>
 <ul><li>
-<code>E</code> - Total energy used</li>
+<code>E</code> = Energy consumed by HPC use (in kWh)</li>
 <li>
-<code>I</code> - Carbon intensity</li>
+<code>CI</code> = Location-based carbon intensity (in
+kgCO<sub>2</sub>e/kWh)</li>
 <li>
-<code>M</code> - Embodied emissions estimate</li>
+<code>M</code> = Embodied emissions (in kgCO<sub>2</sub>e)</li>
 </ul><p>Remember the equation for computing total emissions from HPC system
 use (<code>HPC-E</code>):</p>
-<pre><code><span><span class="va">HPC</span><span class="op">-</span><span class="va">E</span> <span class="op">=</span> <span class="op">(</span><span class="va">E</span> <span class="op">*</span> <span class="va">I</span><span class="op">)</span> <span class="op">+</span> <span class="va">M</span></span></code></pre>
+<pre><code><span><span class="va">HPC</span><span class="op">-</span><span class="va">E</span> <span class="op">=</span> <span class="op">(</span><span class="va">E</span> <span class="op">*</span> <span class="va">CI</span><span class="op">)</span> <span class="op">+</span> <span class="va">M</span></span></code></pre>
 <p>we can plug the numbers in and come up with a value for the total
 emissions arising from our use of HPC.</p>
-<div id="e-i-on-a-per-job-basis" class="callout">
+<div id="e-ci-on-a-per-job-basis" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="e-i-on-a-per-job-basis" class="callout-inner">
+<div id="e-ci-on-a-per-job-basis" class="callout-inner">
 <h3 class="callout-title">
-<code>E * I</code> on a per job basis</h3>
+<code>E * CI</code> on a per job basis</h3>
 <div class="callout-content">
 <p>Rather than computing total energy use and then using an aggregate
 value for the carbon intensity, it may make more sense to compute
-<code>E * I</code> on a per-job basis using the carbon intensity value
+<code>E * CI</code> on a per-job basis using the carbon intensity value
 at the job time. This is the approach used in the tools available on
 ARCHER2 for estimating emissions.</p>
 </div>
@@ -886,7 +887,7 @@ kgCO<sub>2</sub>e, the service lifetime is 7 years and there are 1000
 compute nodes each with 8 GPU. The service is hosted in a location with
 a carbon intensity of 40 gCO<sub>2</sub>e/kWh.</p>
 <ol style="list-style-type: decimal"><li>Compute the scope 2 emissions for the project use</li>
-<li>Compute the scope 3 emissions rate in kgCO2e/GPUh</li>
+<li>Compute the scope 3 emissions rate in kgCO<sub>2</sub>e/GPUh</li>
 <li>Compute the scope 3 emissions for the project use</li>
 <li>Compute the total emissions for the project use</li>
 <li>Do scope 2 or scope 3 emissions dominate or are they evenly
@@ -902,7 +903,7 @@ matched?</li>
 <div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <ol style="list-style-type: decimal"><li><p>The scope 2 emissions from energy use by the project are given by
-<code>E * I</code>, the energy used multiplied by the carbon intensity
+<code>E * CI</code>, the energy used multiplied by the carbon intensity
 of the electricity supply. In this case, this is given by
 <code>3,542,000 kWh x 0.040 kgCO2e/kWh = 141,700 kgCO2e</code>.</p></li>
 <li>
@@ -973,14 +974,14 @@ one of the three pillars of green HPC use.</p>
 <hr class="half-width"><p>The equation to calculate an HPC-CI rate is simple and very closely
 related to the calculation of total emissions (HPC-E) presented
 above:</p>
-<pre><code>HPC-CI = [(E * I) + M] per R</code></pre>
+<pre><code>HPC-CI = [(E * CI) + M] per R</code></pre>
 <ul><li>
 <code>E</code> = Energy consumed by HPC use (in kWh)</li>
 <li>
-<code>I</code> = Location-based marginal carbon intensity (in
-kgCO2/kWh)</li>
+<code>CI</code> = Location-based carbon intensity (in
+kgCO<sub>2</sub>e/kWh)</li>
 <li>
-<code>M</code> = Embodied emissions</li>
+<code>M</code> = Embodied emissions (in kgCO<sub>2</sub>e)</li>
 <li>
 <code>R</code> = Functional unit (e.g. iterations, simulated time,
 calculation cycles, research papers published, cost)</li>
@@ -1164,7 +1165,7 @@ emissions.</li>
   "url": "https://carpentries-incubator.github.io/green-software-hpc/measurement.html",
   "identifier": "https://carpentries-incubator.github.io/green-software-hpc/measurement.html",
   "dateCreated": "2025-06-10",
-  "dateModified": "2025-05-08",
+  "dateModified": "2025-06-10",
   "datePublished": "2025-06-10"
 }
 
