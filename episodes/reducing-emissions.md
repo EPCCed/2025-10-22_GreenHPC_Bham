@@ -195,8 +195,8 @@ Other strategies for improving the HPC-CI metric and, so, reducing emissions dep
 **Operational emissions dominate:**
 
   - Improve the energy efficiency of your use - this may involve power or frequency capping of the hardware you are using. (This improves the ratio of `E` to `R` in the HPC-CI equation.)
-  - Temporal shifting - run when carbon intensity is lower. (Reduces `I`.)
-  - Spatial shifting - run on system where carbon intensity is lower, run on hardware which has better energy efficiency for your use case (e.g. GPU may be more energy efficient for your use). (Reduces `I`, or improves the ratio of `E` to `R`.)
+  - Temporal shifting - run when carbon intensity is lower. (Reduces `CI`.)
+  - Spatial shifting - run on system where carbon intensity is lower, run on hardware which has better energy efficiency for your use case (e.g. GPU may be more energy efficient for your use). (Reduces `CI`, or improves the ratio of `E` to `R`.)
   - Run fewer calculations/jobs. (Reduces `E` and `M`.)
 
 **Embodied emissions dominate:**
@@ -211,10 +211,10 @@ For operators of HPC systems and organisations that are procuring HPC systems, m
 
 **Operational emissions dominate:**
 
-  - Improve the energy efficiency of your HPC systems - this may involve power or frequency capping of the hardware you are providing or purchasing hardware that is more energy efficient for the system use cases.
-  - Ensure that the power and cooling plant are as efficient as possible to minimise overheads.
-  - Enable temporal shifting (either automatically or user controlled) - for example, run workloads with higher power intensities at times when carbon intensity is lower.
-  - Spatial shifting - site HPC systems in locations that have the lowest carbon intensities.
+  - Improve the energy efficiency of your HPC systems - this may involve power or frequency capping of the hardware you are providing or purchasing hardware that is more energy efficient for the system use cases. (Improves the ratio of `E` to `R`.)
+  - Ensure that the power and cooling plant are as efficient as possible to minimise overheads. (Reduces `E`.)
+  - Enable temporal shifting (either automatically or user controlled) - for example, run workloads with higher power intensities at times when carbon intensity is lower. (Reduces `CI`.)
+  - Spatial shifting - site HPC systems in locations that have the lowest carbon intensities. (Reduces `CI`.)
 
 **Embodied emissions dominate:**
 
