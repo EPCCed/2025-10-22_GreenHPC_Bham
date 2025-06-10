@@ -79,12 +79,12 @@ Whether the emissions from electricity use on HPC systems are Downstream Scope 3
 Quantifying the emissions from your work (and generating an emissions rate, as described below) are critical steps on the path to reducing and potentially eliminating emissions from your use of HPC systems. The formula for calculating your emissions from use of HPC systems (`HPC-E`) is straightforward:
 
 ```
-HPC-E = (E * I) + M
+HPC-E = (E * CI) + M
 ```
 
 - `E` = Energy consumed by HPC use (in kWh)
-- `I` = Location-based carbon intensity (in kgCO<sub>2</sub>/kWh)
-- `M` = Embodied emissions 
+- `CI` = Location-based carbon intensity (in kgCO<sub>2</sub>e/kWh)
+- `M` = Embodied emissions (in kgCO<sub>2</sub>e)
 
 You can calculate this on a per job basis or for a larger grouping of HPC use - even for a full lifetime of an HPC service.
 
@@ -96,7 +96,7 @@ While it can be tempting to only include the use of HPC that produced useful out
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Instead of bucketing the carbon emissions of HPC use into scopes 1-3, this calculation buckets them into **operational emissions** (carbon emissions from the electricity required for your HPC use, represented by `E * I`) and **embodied emissions** (carbon emissions from the physical HPC system components, represented by `M`).
+Instead of bucketing the carbon emissions of HPC use into scopes 1-3, this calculation buckets them into **operational emissions** (carbon emissions from the electricity required for your HPC use, represented by `E * CI`) and **embodied emissions** (carbon emissions from the physical HPC system components, represented by `M`).
 
 Follow these steps to calculate your HPC emissions. 
 
@@ -242,14 +242,14 @@ itself.
 
 Now we should have all the data we need to compute our total emissions from HPC system use:
 
-- `E` - Total energy used
-- `I` - Carbon intensity
-- `M` - Embodied emissions estimate
+- `E` = Energy consumed by HPC use (in kWh)
+- `CI` = Location-based carbon intensity (in kgCO<sub>2</sub>e/kWh)
+- `M` = Embodied emissions (in kgCO<sub>2</sub>e)
 
 Remember the equation for computing total emissions from HPC system use (`HPC-E`):
 
 ```
-HPC-E = (E * I) + M
+HPC-E = (E * CI) + M
 ```
 
 we can plug the numbers in and come up with a value for the total emissions arising from our
@@ -257,10 +257,10 @@ use of HPC.
 
 :::::::::::::::::::::::::::::::::::::::: callout
 
-## `E * I` on a per job basis
+## `E * CI` on a per job basis
 
 Rather than computing total energy use and then using an aggregate value for the carbon intensity, it may
-make more sense to compute `E * I` on a per-job basis using the carbon intensity value at the job time. This is the approach used in the tools available on ARCHER2 for estimating emissions.
+make more sense to compute `E * CI` on a per-job basis using the carbon intensity value at the job time. This is the approach used in the tools available on ARCHER2 for estimating emissions.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -279,7 +279,7 @@ is 7 years and there are 1000 compute nodes each with 8 GPU. The service is host
 location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
 
 1. Compute the scope 2 emissions for the project use
-2. Compute the scope 3 emissions rate in kgCO2e/GPUh
+2. Compute the scope 3 emissions rate in kgCO<sub>2</sub>e/GPUh
 3. Compute the scope 3 emissions for the project use
 4. Compute the total emissions for the project use
 5. Do scope 2 or scope 3 emissions dominate or are they evenly matched?
@@ -288,7 +288,7 @@ location with a carbon intensity of 40 gCO<sub>2</sub>e/kWh.
 
 ## Solution
 
-1. The scope 2 emissions from energy use by the project are given by `E * I`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `3,542,000 kWh x 0.040 kgCO2e/kWh = 141,700 kgCO2e`.
+1. The scope 2 emissions from energy use by the project are given by `E * CI`, the energy used multiplied by the carbon intensity of the electricity supply. In this case, this is given by `3,542,000 kWh x 0.040 kgCO2e/kWh = 141,700 kgCO2e`.
 
 2. The scope 3 emissions rate per GPUh is the total scope 3 emissions for the service divided by number of GPUh available over the lifetime of the service.
    1. The total GPUh over the service lifetime is estimated by `7 years x 365 days x 24 hours x 1000 nodes x 8 GPU per node = 490,560,000 GPUh`.
@@ -331,12 +331,12 @@ If you make your HPC use more **energy efficient**, **hardware efficient**, or *
 The equation to calculate an HPC-CI rate is simple and very closely related to the calculation of total emissions (HPC-E) presented above:
 
 ```
-HPC-CI = [(E * I) + M] per R
+HPC-CI = [(E * CI) + M] per R
 ```
 
 - `E` = Energy consumed by HPC use (in kWh)
-- `I` = Location-based marginal carbon intensity (in kgCO2/kWh)
-- `M` = Embodied emissions 
+- `CI` = Location-based carbon intensity (in kgCO<sub>2</sub>e/kWh)
+- `M` = Embodied emissions (in kgCO<sub>2</sub>e)
 - `R` = Functional unit (e.g. iterations, simulated time, calculation cycles, research papers published, cost)
 
 This yields an emissions rate in carbon emissions per functional unit (`HPC-E per R`), e.g. kgCO<sub>2</sub>e/iteration.
