@@ -7,7 +7,7 @@ This lesson introduces environmental sustainability principles in the context of
 high performance computing (HPC) systems. Understanding the scale of emissions from 
 different sources is critical to being able to make changes to work in a more environmentally
 sustainable way. This lesson will give you the ability to understand emissions arising from
-use of HPC system and how to quantify them. We will use practical examples and real data from
+use of HPC systems and how to quantify them. We will use practical examples and real data from
 an existing HPC facility to illustrate the concepts.
 
 We use the [UK National Supercomputing Service, ARCHER2](https://www.archer2.ac.uk) as an 
@@ -40,7 +40,7 @@ course developed by the [Green Software Foundation](https://greensoftware.founda
 
 ## Target audience
 
-Anyone involved in using or delivering HPC resources - a user, a developer of software for use on HPC, an HPC service operator or those involved in procuring HPC systems. By attending this course, you will be able to better understand the effect of HPC systems on carbon emissions, where it fits with emissions from other activities and what concrete actions that can be taken to reduce emissions and the size of the impact from these reductions. No knowledge of environmental sustainability principles is assumed. 
+Anyone involved in using or delivering HPC resources - a user, a developer of software for use on HPC, an HPC service operator, or those involved in procuring HPC systems. By attending this course, you will be able to better understand the effect of HPC systems on carbon emissions, where it fits with emissions from other activities, and what concrete actions can be taken to reduce emissions and the size of the impact from these reductions. No knowledge of environmental sustainability principles is assumed. 
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
