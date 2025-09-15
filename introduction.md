@@ -6,8 +6,8 @@ exercises: 5
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Define green HPC system use
-- Appreciate emissions from HPC in the wider context of other research activities
+- Define green HPC system use.
+- Appreciate emissions from HPC in the wider context of other research activities.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
