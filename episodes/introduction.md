@@ -57,7 +57,7 @@ Write down the activities that you do as part of your work or research that coul
 You may have come up with activities from the following list:
 
 - Travel to/from place of work
-- Travel to and accommodation at conferences, training and meetings
+- Travel to/from and accommodation at conferences, training and meetings
 - Use of other computing resources (e.g. laptops/workstations, cloud resources and the internet)
 - Data storage
 - Laboratory work - chemicals, instruments
@@ -69,7 +69,7 @@ Ranking them in order is more difficult and will differ from person to person. T
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-In fact, **all** activities that we undertake as part of our work (and personal life) produce carbon emissions. While, in an ideal world, we would be able to reduce emissions from all our activities we have finite time and effort so need to prioritise based on which reduction strategies will have the largest impact. This means that the first step is to estimate the emissions from different activities we are involved in as part of our work, even if the estimate is very rough.
+In fact, **all** activities that we undertake as part of our work (and personal life) produce carbon emissions. While, in an ideal world, we would be able to reduce emissions from all our activities we have finite time and effort so need to prioritise based on which reduction strategies will have the largest impact. This means that the first step is to estimate the emissions from different activities we are involved in as part of our work, even if the estimate is very rough. The links below can help to calculate your emissions:
 
 - [Travel emissions calculator (Deloitte UK)](https://www.deloitte.com/uk/en/issues/climate/content/travel-emissions-calculator.html)
 - [Emissions from laptops (Circular Computing)](https://circularcomputing.com/news/carbon-footprint-laptop/)
@@ -84,12 +84,12 @@ In fact, **all** activities that we undertake as part of our work (and personal 
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
-- This course covers green HPC system use, in particular
-- **Carbon Efficiency**: Emit the least amount of carbon possible.
-- **Energy Efficiency**: Use the least amount of energy possible.
-- **Carbon Awareness**: Do more when the electricity is cleaner and do less when the electricity is dirtier.
-- **Hardware Efficiency**: Use the least amount of embodied carbon possible.
-- **Measurement**: What you cannot measure, you cannot improve.
-- **Reducing Emissions**: Understand mechanisms of carbon reduction.
+- This course covers green HPC system use, in particular:
+    - **Carbon Efficiency**: Emit the least amount of carbon possible.
+    - **Energy Efficiency**: Use the least amount of energy possible.
+    - **Carbon Awareness**: Do more when the electricity is cleaner and do less when the electricity is dirtier.
+    - **Hardware Efficiency**: Use the least amount of embodied carbon possible.
+    - **Measurement**: What you cannot measure, you cannot improve.
+    - **Reducing Emissions**: Understand mechanisms of carbon reduction.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
