@@ -6,23 +6,23 @@ exercises: 15
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand the concept of *carbon intensity* in electricity generation
-- Appreciate the level of variation in carbon intensity across the UK and the world
-- Understand techniques for greener use of HPC: demand shifting and demand shaping
+- Understand the concept of *carbon intensity* in electricity generation.
+- Appreciate the level of variation in carbon intensity across the UK and the world.
+- Understand techniques for greener use of HPC: demand shifting and demand shaping.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: questions
 
 - How does electricity generation affect GHG emissions?
-- What is *carbon instensity* of electricity generation and how does it vary geographically and temporally?
+- What is *carbon intensity* of electricity generation and how does it vary geographically and temporally?
 - What techniques can I use to make my use of HPC greener and influence transition to low-carbon electricity generation?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-Not all electricity is produced in the same way. In different locations and times, electricity is generated using a variety of sources with varying carbon emissions. Some sources, such as wind, solar, or hydroelectric, are clean, renewable sources that emit little carbon. On the other hand, fossil fuel sources emit carbon at varying degrees to produce electricity. For example, both gas and coal emit more carbon than renewable sources, but gas-burning power plants emit less carbon than coal-burning power plants.
+Not all electricity is produced in the same way. In different locations and times, electricity is generated using a variety of sources with varying carbon emissions. Some sources (such as wind, solar, or hydroelectric) are clean, renewable sources that emit little carbon. On the other hand, fossil fuel sources emit carbon at varying degrees to produce electricity. For example, both gas and coal emit more carbon than renewable sources, but gas-burning power plants emit less carbon than coal-burning power plants.
 
 Carbon awareness is the idea of doing more when more energy comes from low carbon sources and doing less when more energy comes from high carbon sources.
 
@@ -38,7 +38,7 @@ If your computer is plugged directly into a wind farm, its electricity would hav
 
 ## Embodied carbon of renewable sources
 
-In reality, the carbon intensity of renewable sources still have some GHG emissions associated with them from the emissions used to build, operate and decommission them. As we will se in a later episode, these emissions are usually amortised across the lifetime of the facility (in this case, the lifetime of the generation facility). By convention, these embodied emissions are not usually included in carbon intensity values for generated energy as they are complex to calculate and the emissions saved by replacing non-renewable sources with renewable sources have vastly outweighed the embodied emissions of renewable sources. These emissions sources will become a more important component of energy generation as electricity grids continue to decarbonise.
+In reality, the carbon intensity of renewable sources still have some GHG emissions associated with them from the emissions used to build, operate and decommission them. As we will see in a later episode, these emissions are usually amortised across the lifetime of the facility (in this case, the lifetime of the generation facility). By convention, these embodied emissions are not usually included in carbon intensity values for generated energy as they are complex to calculate and the emissions saved by replacing non-renewable sources with renewable sources have vastly outweighed the embodied emissions of renewable sources. These emissions sources will become a more important component of energy generation as electricity grids continue to decarbonise.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -76,7 +76,7 @@ Carbon intensity also changes over time due to the inherent variability of renew
 
 ## Exercise: Carbon emissions from HPC systems
 
-One estimate of the power draw of the ARCHER2 HPC system is 3.1 MW (including overheads from the power/cooling plant). Mean carbon intensities from different UK regions in 2024 give low emissions regions as ~30 gCO<sub>2</sub>e/kWh, medium emissions regions as ~120 gCO<sub>2</sub>e/kWh and high emissions regions as ~250 gCO<sub>2</sub>e/kWh. What would the carbon emissions be from electricity user in 1 year of ARCHER2 operations in the three different emissions regimes?
+One estimate of the power draw of the ARCHER2 HPC system is 3.1 MW (including overheads from the power/cooling plant). Mean carbon intensities from different UK regions in 2024 give low emissions regions as ~30 gCO<sub>2</sub>e/kWh, medium emissions regions as ~120 gCO<sub>2</sub>e/kWh and high emissions regions as ~250 gCO<sub>2</sub>e/kWh. What would the carbon emissions be from electricity use in 1 year of ARCHER2 operations in the three different emissions regimes?
 
 :::::::::::::::  solution
 
@@ -88,17 +88,17 @@ First we need to estimate the amount of energy consumed by ARCHER2 in kWh for 1 
 3,100 kW x 365 days x 24 hours = 27,156,000 kWh
 ```
 
-Now, we can multiply this energy use by the carbon intensity vales to get the estimated emissions from a year of ARCHER2 operation in the three different locations. e.g. for the low emissions location:
+Now, we can multiply this energy use by the carbon intensity values to get the estimated emissions from a year of ARCHER2 operation in the three different locations. e.g. for the low emissions location:
 
 ```
 27,156,000 kWh x 0.030 kgCO2e/kWh = 815,000 kgCO2e
 ```
 
-- Low CI (30 gCO<sub>2</sub>e/kWh) - 815,000 kgCO<sub>2</sub>e
-- Medium CI (120 gCO<sub>2</sub>e/kWh) - 3,260,720.0 kgCO<sub>2</sub>e
-- High CI (250 gCO<sub>2</sub>e/kWh) - 6,790,000.0 kgCO<sub>2</sub>e
+- Low CI (30 gCO<sub>2</sub>e/kWh) = 815,000 kgCO<sub>2</sub>e
+- Medium CI (120 gCO<sub>2</sub>e/kWh) = 3,260,720.0 kgCO<sub>2</sub>e
+- High CI (250 gCO<sub>2</sub>e/kWh) = 6,790,000.0 kgCO<sub>2</sub>e
 
-Hosting ARCHER2 in a high CI region instead of the low CI region would lead to an additional 5,980,000 kgCO<sub>2</sub>e emissions per year.
+Hosting ARCHER2 in a high CI region instead of a low CI region would lead to an additional 5,980,000 kgCO<sub>2</sub>e emissions per year.
 
 :::::::::::::::::::::::::
 
@@ -140,9 +140,9 @@ Energy from fossil fuel plants is usually the most expensive so this is the pref
 
 Renewable sources are the cheapest, so they prefer not to do this. If a renewable source does not manage to sell all of its electricity, it has to throw the rest away.
 
-Reducing the amount of electricity consumed by your use of HPC can help decrease the energy's carbon intensity as the first thing to be scaled back are fossil fuels.
+Reducing the amount of electricity consumed by your use of HPC can help decrease the carbon intensity of the energy required as the first thing to be scaled back are fossil fuels.
 
-When the demand for electricity goes up, utilities need to increase the supply to balance supply and demand. They can do this in one of two ways:
+When the demand for electricity goes up, utilities need to **increase** the supply to balance supply and demand. They can do this in one of two ways:
 
 1. **Buy more energy from renewable sources that are currently being curtailed**
 
@@ -176,7 +176,7 @@ Carbon intensity is lower when more energy comes from lower-carbon sources and h
 
 ### Demand shifting
 
-Being carbon aware means responding to shifts in carbon intensity by increasing or decreasing your demand. If your work allows you to be flexible with when and where you run workloads, you can shift accordingly - consuming electricity when the carbon intensity is lower and pausing production when it is higher. For example, running a simulation or model at a different time or region with much lower carbon intensity.
+Being carbon aware means responding to shifts in carbon intensity by increasing or decreasing your demand. If your work allows you to be flexible with when and where you run workloads, you can shift accordingly - consuming electricity when the carbon intensity is lower and pausing production when it is higher. For example, running a simulation or model at a different time or in a different region with much lower carbon intensity.
 
 [Studies](https://ieeexplore.ieee.org/document/6128960) show these actions can result in 45% to 99% carbon reductions depending on the number of renewables powering the grid.
 
@@ -211,12 +211,12 @@ To be able to take advantage of temporal shifting on HPC systems typically requi
 
 ### Demand shaping
 
-Demand shifting is the strategy of moving computation to regions or times when the carbon intensity is lowest. Demand shaping is a similar strategy. However, instead of moving demand to a different region or time, we shape our computation to match the existing supply.
+Demand shifting (as described above) is the strategy of moving computation to regions or times when the carbon intensity is lowest. Demand shaping is a similar strategy. However, instead of moving demand to a different region or time, we shape our computation to match the existing supply.
 
 ![Diagram illustrating demand shaping](./fig/16_demand_shaping.png "Diagram illustrating demand shaping")
 
 - If carbon intensity is low, increase the demand; do more (or faster) calculations.
-- If carbon intensity is high, decrease demand; do less (or slower) calculations.
+- If carbon intensity is high, decrease demand; do fewer (or slower) calculations.
 
 Demand shaping for carbon-aware HPC use is all about the supply of carbon. When the carbon cost of running your simulation or model becomes high, shape the demand to match the supply of carbon. This can happen automatically, or the user can make a choice.
 
@@ -226,13 +226,13 @@ Software or HPC services can also have eco modes that can - either automatically
 
 One example of this is video conferencing software that adjusts streaming quality automatically. Rather than streaming at the highest quality possible at all times, it reduces the video quality to prioritise audio when the bandwidth is low.
 
-Another example is TCP/IP. The transfer speed increases in response to how much data is broadcast over the wire.
+Another example is TCP/IP: the transfer speed increases in response to how much data is broadcast over the wire.
 
 A third example is progressive enhancement with the web. The web experience improves depending on the resources and bandwidth available on the end user's device.
 
 Demand shaping is related to a broader concept in sustainability, which is to reduce consumption. We can achieve a lot by becoming more efficient with resources, but we also need to consume less at some point.
 
-As green users of HPC systems, we would consider cancelling or reducing the power intensity of our workflow when the carbon intensity is high instead of demand shifting - reducing the energy demands of our work.
+As green users of HPC systems, we could consider cancelling or reducing the power intensity of our workflow when the carbon intensity is high instead of demand shifting - reducing the energy demands of our work.
 
 :::::::::::::::::::::::::::::::::::::::  challenge
 
@@ -245,18 +245,18 @@ A typical HPC system has a wide variety of jobs to schedule and different HPC sy
 ## Solution
 
 - Scheduling based on power intensity
-  - Manual: users place jobs into different queues based on predicted power intensity. Charging discounts for users who use this facility
+  - Manual: users place jobs into different queues based on predicted power intensity; charging discounts for users who use this facility
   - Automatic: system detects/predicts power intensity of jobs and schedules accordingly
 
 - Credit based system:
-  - Earning and spending periods: during earning period, users earn priority tokens based on how emissions efficient they are (would start with tokens and subtract to stop more tokens for more use). Spend period, users with most tokens get priority on system
-  - This type of approach [has been piloted on the Fugaku HPC system n Japan](https://doi.ieeecomputersociety.org/10.1109/SC41406.2024.00030)
+  - Earning and spending periods: during earning period, users start with a number of tokens and subtract based on efficiency (to stop more tokens for more use). During spend period, users with most efficiency from earning period get priority on system
+  - This type of approach [has been piloted on the Fugaku HPC system in Japan](https://doi.ieeecomputersociety.org/10.1109/SC41406.2024.00030)
 
 
 - Power capping approaches:
   - System power cap fluctuates with grid carbon intensity
   - Need a tool to distribute power cap amongst jobs
-  - For example [HPEs PowerSched tool](https://cug.org/proceedings/cug2023_proceedings/includes/files/pap113s2-file1.pdf)
+  - For example [HPE's PowerSched tool](https://cug.org/proceedings/cug2023_proceedings/includes/files/pap113s2-file1.pdf)
 
 :::::::::::::::::::::::::
 
