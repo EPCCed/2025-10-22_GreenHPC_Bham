@@ -346,7 +346,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Hardware Efficiency</h1>
-        <p>Last updated on 2025-06-09 |
+        <p>Last updated on 2025-09-16 |
 
         <a href="https://github.com/carpentries-incubator/green-software-hpc/edit/main/episodes/hardware-efficiency.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -377,17 +377,17 @@ use of HPC systems?</li>
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
 <ul><li>Understand what is meant by “embodied carbon” in the context of HPC
-systems</li>
+systems.</li>
 <li>Learn how embodied carbon efficiency can be bettered by extending
 the lifespan of HPC systems and improving performance of applications on
-HPC systems</li>
+HPC systems.</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
 <section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
-<hr class="half-width"><p>The hardware used that makes up the HPC systems you are using is an
+<hr class="half-width"><p>The hardware that makes up the HPC systems you are using is an
 important element to consider when looking to be a greener user of HPC.
 Indeed, for HPC systems located where carbon intensity of electricity
 generation is low, the hardware may be the dominant component of
@@ -395,15 +395,16 @@ emissions associated with HPC system use.</p>
 <p>You will see how embodied carbon is a hidden cost when it comes to
 hardware and the different measures you can take to reduce the impact
 that the creation, destruction, and running of this hardware involves.
-More specifically, extending its lifetime and improving the efficiency
-of your hardware use are the main ways of reducing this impact.</p>
+More specifically, extending hardware lifetime and improving the
+efficiency of your hardware use are the main ways of reducing this
+impact.</p>
 </section><section><h2 class="section-heading" id="key-concepts">Key concepts<a class="anchor" aria-label="anchor" href="#key-concepts"></a></h2>
 <hr class="half-width"><div class="section level3">
 <h3 id="embodied-carbon">Embodied carbon<a class="anchor" aria-label="anchor" href="#embodied-carbon"></a></h3>
 <p>The manufacturing of the device you are using to participate in this
 workshop produced carbon and disposing of it at the end of its life may
 release more. Embodied (or embedded) carbon is the amount of carbon
-emissions from the creation and disposal of a device.</p>
+emissions due to the creation and disposal of a device.</p>
 <p>When calculating the total carbon emissions for HPC services, both
 the carbon emissions associated with running the system as well as the
 embodied carbon of the system must be accounted for.</p>
@@ -425,7 +426,7 @@ lifetime.</p>
 the expected lifespan of a device. For example, suppose it took
 4000 kgCO<sub>2</sub>e to build an HPC system, and we expect it to last
 four years. Amortisation means that we can say the HPC system emits
-1000 kgCO<sub>2</sub>e/year.</p>
+1000 kgCO<sub>2</sub>e/year in embodied carbon alone.</p>
 <figure><img src="./fig/18_amortization.png" title="Diagram illustrating amortisation" alt="Diagram illustrating amortisation" class="figure mx-auto d-block"><div class="figcaption">Diagram illustrating amortisation</div>
 </figure><p>Rather than years, we typically amortise the embodied emissions over
 the total amount of resource available on the HPC system over its
@@ -436,9 +437,9 @@ emissions rate in kgCO<sub>2</sub>e/GPUh).</p>
 </div>
 </section><section><h2 class="section-heading" id="how-to-improve-hardware-efficiency">How to improve hardware efficiency<a class="anchor" aria-label="anchor" href="#how-to-improve-hardware-efficiency"></a></h2>
 <hr class="half-width"><p>By taking into account the embodied carbon, it is clear that by the
-time we come to install an HPC system, it’s already emitted a large
+time we come to install an HPC system, it has already emitted a large
 amount of carbon. Computers also have a limited lifespan, which means
-they eventually are unable to handle modern workloads, or suffer
+they are eventually unable to handle modern workloads, or they suffer
 failures and need to be replaced. In these terms, hardware consumption
 is a proxy for carbon, and since our goal is to be carbon efficient, we
 must also be hardware efficient.</p>
@@ -488,14 +489,14 @@ electricity use are for the HPC system you are using to make useful
 choices about improving your carbon efficiency. There are three
 potential scenarios to maximise carbon efficiency:</p>
 <ul><li>
-<strong>Embodied carbon dominates:</strong> run as high performance
+<strong>Embodied carbon dominates -</strong> run as high performance
 as possible irrespective of electricity use</li>
 <li>
 <strong>Embodied carbon and carbon from electricity use are evenly
-balanced:</strong> you need to find a balance of performance and energy
+balanced -</strong> you need to find a balance of performance and energy
 efficiency</li>
 <li>
-<strong>Carbon from electricity use dominates:</strong> run in as
+<strong>Carbon from electricity use dominates -</strong> run in as
 energy efficient a manner as possible</li>
 </ul><p>We will look at a specific example of this balance in a later episode
 of this workshop.</p>
@@ -509,14 +510,15 @@ of this workshop.</p>
 is key</h3>
 <div class="callout-content">
 <p>Understanding the most carbon efficient way to make use of HPC
-systems (and the most carbon efficient way to operate then, including
-choosing their lifetime) can be complex as it depends on many factors:
-the embodied carbon of the hardware, the lifetime of the system, the
-carbon intensity of the electricity supply and how that changes over the
-service lifetime, the efficiency of the workload you are running on the
-type of hardware provided by the system. However, one key aspect of
-being able to use HPC in a carbon efficient way is for your workflow to
-have the flexibility to run on different system types efficiently.</p>
+systems (and the most carbon efficient way to operate them, including
+choosing their lifetime) can be complex as it depends on many factors.
+These can include the embodied carbon of the hardware, the lifetime of
+the system, the carbon intensity of the electricity supply and how that
+changes over the service lifetime, and the efficiency of the workload
+you are running on the type of hardware provided by the system. However,
+one key aspect of being able to use HPC in a carbon efficient way is for
+your workflow to have the flexibility to run on different system types
+efficiently.</p>
 </div>
 </div>
 </div>
@@ -528,7 +530,7 @@ have the flexibility to run on different system types efficiently.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>Embodied carbon of an HPC system is the amount of carbon pollution
-emitted during the creation and disposal of it.</li>
+emitted during the creation and disposal of the HPC system.</li>
 <li>When calculating your total carbon pollution, you must consider both
 that which is emitted when running on the HPC system as well as the
 embodied carbon associated with its creation and disposal.</li>
@@ -599,7 +601,7 @@ carbon efficiency from HPC system use.</li>
   "url": "https://carpentries-incubator.github.io/green-software-hpc/hardware-efficiency.html",
   "identifier": "https://carpentries-incubator.github.io/green-software-hpc/hardware-efficiency.html",
   "dateCreated": "2025-09-16",
-  "dateModified": "2025-06-09",
+  "dateModified": "2025-09-16",
   "datePublished": "2025-09-16"
 }
 
