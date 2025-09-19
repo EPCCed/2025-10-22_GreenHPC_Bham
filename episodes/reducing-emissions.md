@@ -26,10 +26,10 @@ exercises: 10
 In recent years, many economic actors have sought to reach different climate goals by making
 various commitments to reducing carbon emissions.
 
-The terms "net zero", "carbon neutral", "carbon negative" and "climate neutral" have been
-used interchangeably with the primary objective to remove, reduce and prevent carbon emissions
+The terms "net zero", "carbon neutral", "carbon negative", and "climate neutral" have been
+used interchangeably when discussing goals to remove, reduce and prevent carbon emissions.
 As interest in these targets grows, it is essential to have a common understanding of what
-they mean and how to achieve them through the strategies and measurement procedures we have learnt.
+these terms mean and how to achieve them through the strategies and measurement procedures we have learnt.
 
 ## Carbon reduction methodologies
 
@@ -62,7 +62,7 @@ Abatement is the critical component of carbon emissions reduction strategies. Pi
 
 - Individual users:
   - Run fewer jobs!
-  - Reduce wasted resources by having less job failures
+  - Reduce wasted resources by having fewer job failures
   - Run on systems that minimise emissions (spatial shifting)
   - Run when emissions from electricity are lower (temporal shifting)
 
@@ -93,7 +93,7 @@ Various positive benefits can stem from these projects, from ecosystem protectio
 
 There are some limitations to carbon offsets and that is why they are not considered in an HPC-CI metric. For example, imagine two projects, both running on a HPC service that is 100% carbon offset and matched 100% by renewable energy. Project A has invested significant time and resources into making sure it is using resources efficiently, whereas project B uses resources very inefficiently. For the HPC-CI to be a helpful metric, project A needs to score better than project B.
 
-If the HPC-CI considered offsets, both projects would score 0. This would not tell us anything about how efficiently they are using resources. Although project B is emitting more carbon molecules into the atmosphere per unit of output, since its score is 0 and the lowest score is 0, why would it make further investments into improving its carbon efficiency?
+If the HPC-CI considered offsets, both projects would score 0. This would not tell us anything about how efficiently they are using resources. Although project B is emitting more carbon molecules into the atmosphere per unit of output, its score is still 0 and the lowest score is 0, therefore why would it make further investments into improving its carbon efficiency?
 
 HPC services and users need to have plans for how to both eliminate as well as neutralise emissions and the HPC-CI helps them to drive the elimination of emissions due to their use of HPC systems. This makes the HPC-CI a useful tool to help a research project or HPC service reach net zero.
 
@@ -104,14 +104,14 @@ HPC services and users need to have plans for how to both eliminate as well as n
 This includes actions such as:
 
 - **Conservation** - Credits are created based on carbon not released through protecting old trees.
-- **Community Projects** - These projects help communities worldwide, mainly undeveloped ones, by introducing sustainable living methods.
-- **Waste to energy** - These projects capture methane/landfill gas in smaller villages, human or agriculture waste, and convert it into electricity.
+- **Community projects** - These projects help communities worldwide, mainly developing ones, by introducing sustainable living methods.
+- **Waste to energy** - These projects capture methane/landfill gas from smaller villages, or human/agriculture waste, and convert it into electricity.
 
 ### Neutralising / Carbon Removal
 
 [Neutralisations](https://www.abatable.com/blog/carbon-removal-vs-carbon-avoidance-projects) are actions that organisations or individuals take to remove carbon from the atmosphere. Neutralisations refer to the removal and permanent storage of atmospheric carbon to counterbalance the effect of releasing CO<sub>2</sub> into the atmosphere. This includes actions such as:
 
-- **Enhancing natural carbon sinks** that remove CO<sub>2</sub> from the atmosphere. For example, forest restoration, since photosynthesis removes CO<sub>2</sub> naturally. Forest expansion comes with challenges as it's essential not to impact the dynamics of farmland and food supply elsewhere. Modern farming methods can also prolong the time carbon remains stored in soil.
+- **Enhancing natural carbon sinks** that remove CO<sub>2</sub> from the atmosphere. For example, forest restoration, since photosynthesis removes CO<sub>2</sub> naturally. Forest expansion comes with challenges as it is essential not to impact the dynamics of farmland and food supply elsewhere. Modern farming methods can also prolong the time carbon remains stored in soil.
 - **Direct air capture** is the process of capturing CO<sub>2</sub> from the air and storing it permanently, either underground or in long-lived products like concrete.
 
 The effectiveness of these methods is typically measured based on whether they can deliver carbon removal at the scale and speed needed.
@@ -146,7 +146,7 @@ Carbon neutral is a significant first step for any organisation since it encoura
 
 Net zero means reducing emissions according to the latest climate science and balancing remaining residual emissions through carbon removals (neutralisations). Net zero, by definition, requires emissions reductions in line with a 1.5&deg;C pathway. All organisations must do this to achieve net-zero global emissions by 2050.
 
-The critical differentiator between net zero and carbon neutral is net zero's focus on abatement rather than neutralisations and compensations. A net-zero target aims to eliminate emissions and only to use offsetting for the residual emissions that you cannot eliminate
+The crucial difference between net zero and carbon neutral is that net zero focuses on abatement rather than neutralisations and compensations. A net-zero target aims to eliminate emissions and only to use offsetting for the residual emissions that you cannot eliminate
 
 The [standard for net zero](https://sciencebasedtargets.org/resources/files/foundations-for-net-zero-full-paper.pdf) is being developed by the [Science Based Targets initiative](https://sciencebasedtargets.org/) (SBTi). They calculate that there is a 66% probability of limiting global warming to 1.5&deg;C if we reach a level of abatement of about 90% of all GHG emissions by mid-century. So, to meet a net-zero target, an organisation needs to eliminate 90% of its emissions by 2050. The remaining emissions can only be offset using neutralisations and permanent carbon removals.
 
@@ -158,7 +158,7 @@ Fo HPC facilities, part of these strategies include educating and putting polici
 
 ## HPC-CI as part of a Net-Zero strategy
 
-The HPC-CI is a metric specifically designed to drive the elimination of emissions. The only way to reduce your rate is to invest time and resources into actions that eliminate emissions. The only activities the HPC-CI recognises as elimination actions are making your use of HPC systems more energy-efficient, more hardware efficient, or consuming lower-carbon energy sources. Offsets are an essential component of any climate strategy; however, offsets are not eliminations and therefore are not included in the HPC-CI metric.
+The HPC-CI is a metric specifically designed to drive the elimination of emissions. The only way to reduce your rate is to invest time and resources into actions that eliminate emissions. The only activities the HPC-CI recognises as elimination actions are making your use of HPC systems more energy efficient, more hardware efficient, or consuming lower-carbon energy sources. Offsets are an essential component of any climate strategy; however, offsets are not eliminations and therefore are not included in the HPC-CI metric.
 
 Any net-zero strategy needs to have plans for how to both eliminate as well as neutralise emissions. The HPC-CI helps organisations and users drive the elimination of emissions due to HPC system use. This makes the HPC-CI a useful component of any net-zero strategy for operation and use of HPC systems.
 
@@ -170,7 +170,7 @@ We have mentioned above how the HPC-CI metric is designed to drive abatement of 
 
 ## Reduction in consumption of HPC 
 
-While we cover strategies for reducing emissions from (roughly) a constant amount of HPC use or HPC provision it is clear that a key part (possibly the most important part) of reduction of emissions from HPC use is a reduction in the consumption and provision of HPC. At a fundamental level we need to reduce the amount of compute we are using and the amount of compute hardware we are buying.
+While we cover strategies for reducing emissions from a roughly constant amount of HPC use or HPC provision it is clear that a key part (possibly the most important part) of reduction of emissions from HPC use is a reduction in the consumption and provision of HPC. At a fundamental level we need to reduce the amount of compute we are using and the amount of compute hardware we are buying.
 
 > "We seem to need reminding that computing is not exempt from having to drastically reduce emissions. Instead of assuming computing can innovate the path to a greater future, the bravest and most heroic action the computing sector could take is to show restraint and leadership, ..."
 >
@@ -182,28 +182,28 @@ While we cover strategies for reducing emissions from (roughly) a constant amoun
 
 Before we delve into different approaches for different components of the HPC-CI equation, there is a high level consideration that can reduce both the `E` and `M` terms in the HPC-CI equation simultaneously:
 
-**Ensure any use of HPC is useful** - this sounds obvious but most HPC users will have had the experience of running jobs on HPC systems which consume resources but do not produce useful output due to errors in the software, in the input parameters or even in the script that runs the job. To improve the HPC-CI rate:
+**Ensure any use of HPC is useful** - this sounds obvious but most HPC users will have had the experience of running jobs on HPC systems which consume resources but do not produce useful output due to errors in the software, the input parameters or even the script that runs the job. To improve the HPC-CI rate:
 
-- Ensure that the jobs you are running will produce useful/significant output even if they run correctly - do not run calculations/jobs without a clear understanding of what they add to the research project.
-- Carefully test input files and job scripts with small/short jobs before running at large scale to reduce the likelihood of wasted emissions.
-- Consider if you can achieve the same project goals with fewer jobs/calculations. For example, optimise the sampling choices when exploring parameter spaces.
+- Ensure that the jobs you are running will produce useful/significant output even if they run correctly - do not run calculations and jobs without a clear understanding of what they add to the research project.
+- Carefully test input files and job scripts with small or short jobs before running at large scale to reduce the likelihood of wasted emissions.
+- Consider if you can achieve the same project goals with fewer jobs or calculations. For example, optimise the sampling choices when exploring parameter spaces.
 
 Similarly, for people involved in operating and procuring HPC systems, they need to work to ensure that users on the system have the best opportunity to do useful work and reduce wastage, for example by high quality documentation and training and a service design that supports users in making the most of their resources.
 
-Other strategies for improving the HPC-CI metric and, so, reducing emissions depend on whether the dominant component is operational emissions (i.e. emissions from energy use) or the embodied emissions. If the components are evenly balanced then you should look at options from both sections.
+Other strategies for improving the HPC-CI metric and thus reducing emissions depend on whether the dominant component is operational emissions (i.e. emissions from energy use) or the embodied emissions. If the components are evenly balanced then you should look at options from both sections.
 
 **Operational emissions dominate:**
 
   - Improve the energy efficiency of your use - this may involve power or frequency capping of the hardware you are using. (This improves the ratio of `E` to `R` in the HPC-CI equation.)
   - Temporal shifting - run when carbon intensity is lower. (Reduces `CI`.)
-  - Spatial shifting - run on system where carbon intensity is lower, run on hardware which has better energy efficiency for your use case (e.g. GPU may be more energy efficient for your use). (Reduces `CI`, or improves the ratio of `E` to `R`.)
-  - Run fewer calculations/jobs. (Reduces `E` and `M`.)
+  - Spatial shifting - run on a system where carbon intensity is lower, run on hardware which has better energy efficiency for your use case, e.g. GPU may be more energy efficient for your use. (Reduces `CI`, or improves the ratio of `E` to `R`.)
+  - Run fewer calculations or jobs. (Reduces `E` and `M`.)
 
 **Embodied emissions dominate:**
 
-  - Improve the performance of your use - more output per unit of time (even at the expense of energy efficiency by removing any power). (improves the ratio of `M` to `R`.)
-  - Spatial shifting - run on system which has lower embodied emissions rate for your use. (Reduces `M`.)
-  - Run fewer calculations/jobs. (Reduces `E` and `M`.)
+  - Improve the performance of your use - more output per unit of time (even at the expense of energy efficiency through removing any power). (improves the ratio of `M` to `R`.)
+  - Spatial shifting - run on a system which has lower embodied emissions rate for your use. (Reduces `M`.)
+  - Run fewer calculations or jobs. (Reduces `E` and `M`.)
 
 #### Operators and procuring HPC systems
 
@@ -218,7 +218,7 @@ For operators of HPC systems and organisations that are procuring HPC systems, m
 
 **Embodied emissions dominate:**
 
-  - Work with users to improve the performance of jobs on the service - more output per unit of time (even at the expense of energy efficiency by removing any power).
+  - Work with users to improve the performance of jobs on the service - more output per unit of time (even at the expense of energy efficiency through removing any power).
   - Extend the lifetime of the service as long as possible to extract maximum value from the emissions already in the atmosphere from purchase of the HPC system.
   - Purchase HPC systems that have the best ratio of embodied emissions to performance for the workloads that will be run.
 
@@ -227,9 +227,9 @@ For operators of HPC systems and organisations that are procuring HPC systems, m
 
 - There are a number of methodologies commonly applied to help in the overall fight against climate change. These fall into the general categories of carbon elimination (also known as "abatement"), carbon avoidance (a.k.a. "compensating"), or carbon removal (a.k.a. "neutralising").
 - Abatement is the most effective way to fight climate change although complete carbon elimination is not possible.
-- Compensating includes the adoption of renewable energy sources, sustainable living practices, recycling, planting trees etc.
-- Neutralisations refer to the removal and permanent storage of atmospheric carbon to counterbalance the effect of releasing CO<sub>2</sub> into the atmosphere. Neutralisations tend to remove the carbon from the atmosphere in the short and medium-term.
-- Net zero aims to eliminate emissions and only offset the residual emissions that you cannot eliminate to reach the 1.5&deg;C target set by the Paris Climate Agreement.
+- Compensating includes the adoption of renewable energy sources, sustainable living practices, recycling, planting trees, etc.
+- Neutralisations refer to the removal and permanent storage of atmospheric carbon to counterbalance the effect of releasing CO<sub>2</sub> into the atmosphere. Neutralisations tend to remove the carbon from the atmosphere in the short- and medium-term.
+- Net zero aims to eliminate emissions and only offset the residual emissions that cannot be eliminated to reach the 1.5&deg;C target set by the Paris Climate Agreement.
 - Which strategies users or HPC system operators prioritise to reduce emissions depends on if the operational or embodied emissions dominate.
 - A key part of reducing emissions from HPC use is reducing our consumption of HPC resources.
 
