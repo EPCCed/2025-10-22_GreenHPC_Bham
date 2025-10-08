@@ -28,6 +28,39 @@ After completing this lesson you should:
 - Gain practical advice on how you can measure and improve the carbon efficiency of your use of
   HPC
 
+## Location and timings
+
+- Date: 22 October 2025
+- Time: 10:00-15:30 BST
+- Location: G08 Elm House, University of Birmingham, UK ([location](https://www.archer2.ac.uk/training/locations/birmingham.html))
+- Instructor: Andy Turner, EPCC
+
+## Schedule
+
+| Time | Episode |
+|-----:|---------|
+| 10:00 | Introduction |
+| 10:15 | Carbon efficiency |
+| 10:35 | Energy efficiency |
+| 11:05 | Morning break |
+| 11:25 | Carbon awareness |
+| 11:55 | Hardware efficiency |
+| 12:15 | Lunch |
+| 13:00 | Measurement |
+| 14:00 | Afternoon break |
+| 14:20 | Reducing emissions |
+| 15:00 | Next steps |
+| 15:30 | End |
+
+## Registration
+
+- [Registration on ARCHER2 website](https://www.archer2.ac.uk/training/courses/251022-green-computing/)
+
+## Catering
+
+No refreshments or lunch are provided. Local organisors will be on hand to suggest locations.
+
+
 :::::::::::::::::::::::::::::::::::::: callout
 
 This workshop is based on and builds on the material in the [Green Software Practitioner](https://learn.greensoftware.foundation/)
